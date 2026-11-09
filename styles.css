@@ -403,9 +403,9 @@ h2 {
 .journey { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 77px; }
 .journey-track {
   position: absolute;
-  top: 82px;
-  right: 14%;
-  left: 14%;
+  top: 90px;
+  right: calc((100% - 32px) / 3 - 56px);
+  left: 56px;
   height: 1px;
   overflow: hidden;
   background: rgba(245, 166, 35, .22);
