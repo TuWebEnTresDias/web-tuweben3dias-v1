@@ -804,3 +804,28 @@ h2 {
   .trust-heading { position: static; }
   .trust-card { min-height: 0; padding: 24px; }
 }
+
+
+/* Identidad visual propia para cada canal */
+.comparison-row-web {
+  background: radial-gradient(ellipse at 100% 0%, rgba(245,166,35,.22), transparent 55%), radial-gradient(ellipse at 0% 100%, rgba(48,205,177,.12), transparent 48%), #141719;
+  border-color: rgba(245,166,35,.32);
+}
+.comparison-row-instagram {
+  background: radial-gradient(ellipse at 100% 0%, rgba(255,61,129,.25), transparent 55%), radial-gradient(ellipse at 0% 100%, rgba(151,71,255,.16), transparent 48%), #171316;
+  border-color: rgba(255,95,155,.32);
+}
+.comparison-row-instagram .comparison-icon { color: #ff72a8; border-color: rgba(255,94,157,.5); background: linear-gradient(135deg, rgba(255,190,72,.16), rgba(232,62,144,.18), rgba(118,67,255,.16)); }
+.comparison-row-maps {
+  background: radial-gradient(ellipse at 100% 0%, rgba(66,133,244,.2), transparent 48%), radial-gradient(ellipse at 0% 100%, rgba(52,168,83,.16), transparent 48%), radial-gradient(ellipse at 100% 100%, rgba(251,188,5,.13), transparent 42%), radial-gradient(ellipse at 0% 0%, rgba(234,67,53,.12), transparent 42%), #141719;
+  border-color: rgba(66,133,244,.32);
+}
+.comparison-row-maps .comparison-icon { color: #61a0ff; border-color: rgba(66,133,244,.48); background: linear-gradient(135deg, rgba(66,133,244,.16), rgba(52,168,83,.13), rgba(251,188,5,.12), rgba(234,67,53,.12)); }
+.comparison-row-facebook {
+  background: radial-gradient(ellipse at 100% 0%, rgba(24,119,242,.26), transparent 56%), radial-gradient(ellipse at 0% 100%, rgba(84,164,255,.13), transparent 50%), #11151b;
+  border-color: rgba(64,145,255,.32);
+}
+.comparison-row-facebook .comparison-icon { color: #70adff; border-color: rgba(24,119,242,.5); background: rgba(24,119,242,.16); }
+.comparison-row-instagram .comparison-badge-muted { border-color: rgba(255,95,155,.26); }
+.comparison-row-maps .comparison-badge-muted { border-color: rgba(66,133,244,.26); }
+.comparison-row-facebook .comparison-badge-muted { border-color: rgba(64,145,255,.26); }
