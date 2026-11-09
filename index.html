@@ -43,11 +43,11 @@
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero-grid container">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-dot"></span> Webs optimizadas para IAs</p>
-            <h1 id="hero-title">¿Tu negocio aparece cuando le preguntan a <span>ChatGPT?</span></h1>
-            <p class="hero-lede">Creamos páginas web que explican lo que hacés, dónde trabajás y cómo contactarte.</p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> WEB · IA · CONTACTO</p>
+            <h1 id="hero-title">Tu negocio,<br><span>conectado al mundo.</span></h1>
+            <p class="hero-lede">Una web clara ayuda a mostrar lo que hacés y acercar clientes, buscadores e IAs.</p>
             <form class="demo-picker" id="demo-form">
-              <label for="trade">Elegí un rubro y mirá una demo</label>
+              <label for="trade">Explorá una demo por rubro</label>
               <div class="demo-controls">
                 <select id="trade" name="trade" required>
                   <option value="" selected disabled>Seleccioná un rubro</option>
@@ -57,186 +57,109 @@
                   <option value="gasista">Gasista</option>
                   <option value="techista">Techista</option>
                   <option value="albanil">Albañil</option>
+                  <option value="fumigador">Fumigador</option>
+                  <option value="vidriero">Vidriero</option>
+                  <option value="zinguero">Zinguero</option>
                 </select>
-                <button class="button button-primary" type="submit">Ver demo <span aria-hidden="true">↗</span></button>
+                <button class="button button-primary" type="submit">Ver demo <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4.5 10h10.75M10 4.75 15.25 10 10 15.25"/></svg></button>
               </div>
-              <p class="demo-status" id="demo-status" aria-live="polite">Sin datos personales: solo elegís el ejemplo que querés ver.</p>
+              <p class="demo-status" id="demo-status" aria-live="polite">Sin registro: elegí un rubro y abrí su demo.</p>
             </form>
-            <div class="hero-footnote">
-              <span class="status-dot" aria-hidden="true"></span>
-              <span>Web, dominio y hosting incluidos en una sola propuesta.</span>
-            </div>
           </div>
 
           <div class="hero-visual" data-scene-frame>
-            <div class="scene-caption">
-              <span class="scene-caption-label">Tu negocio en el mundo digital</span>
-              <span class="scene-caption-live"><i></i> CONECTADO</span>
-            </div>
-            <svg class="business-scene" viewBox="0 0 760 600" role="img" aria-labelledby="scene-title scene-desc">
-              <title id="scene-title">Un negocio conectado con su web, las IAs, la nube, Google Maps y nuevos leads</title>
-              <desc id="scene-desc">Ilustración isométrica de un local sobre una plataforma digital. Líneas animadas conectan el negocio con los servicios que ayudan a mostrarlo y recibir consultas.</desc>
+            <svg class="business-scene" viewBox="0 0 800 620" role="img" aria-labelledby="scene-title scene-desc">
+              <title id="scene-title">El negocio como un planeta conectado con la web, la inteligencia artificial, la nube, Maps y nuevos leads</title>
+              <desc id="scene-desc">Un planeta azul verdoso con un negocio en su centro y conexiones luminosas que llegan a IA, nube, Maps y leads.</desc>
               <defs>
-                <radialGradient id="scene-aura" cx="50%" cy="50%" r="50%">
-                  <stop offset="0" stop-color="#f5a623" stop-opacity=".19"/>
-                  <stop offset=".58" stop-color="#f5a623" stop-opacity=".05"/>
+                <radialGradient id="globe-surface" cx="32%" cy="23%" r="78%">
+                  <stop offset="0" stop-color="#c8f5df"/>
+                  <stop offset=".24" stop-color="#56cda9"/>
+                  <stop offset=".58" stop-color="#227c82"/>
+                  <stop offset=".84" stop-color="#174a56"/>
+                  <stop offset="1" stop-color="#07171d"/>
+                </radialGradient>
+                <radialGradient id="globe-shade" cx="32%" cy="28%" r="75%">
+                  <stop offset=".45" stop-color="#02080b" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#02080b" stop-opacity=".78"/>
+                </radialGradient>
+                <radialGradient id="globe-aura">
+                  <stop offset="0" stop-color="#69d7b7" stop-opacity=".19"/>
+                  <stop offset=".62" stop-color="#f5a623" stop-opacity=".06"/>
                   <stop offset="1" stop-color="#f5a623" stop-opacity="0"/>
                 </radialGradient>
-                <linearGradient id="platform-top" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#27221b"/>
-                  <stop offset=".55" stop-color="#151414"/>
-                  <stop offset="1" stop-color="#24201a"/>
+                <linearGradient id="globe-grid" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#e9fff4" stop-opacity=".38"/>
+                  <stop offset="1" stop-color="#b2e8df" stop-opacity=".08"/>
                 </linearGradient>
-                <linearGradient id="platform-side" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#30271a"/>
-                  <stop offset="1" stop-color="#100e0c"/>
-                </linearGradient>
-                <linearGradient id="front-wall" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#282421"/>
-                  <stop offset="1" stop-color="#171716"/>
-                </linearGradient>
-                <linearGradient id="side-wall" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#24211f"/>
-                  <stop offset="1" stop-color="#111111"/>
-                </linearGradient>
-                <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#ffc85c"/>
-                  <stop offset=".55" stop-color="#f5a623"/>
-                  <stop offset="1" stop-color="#b36b12"/>
-                </linearGradient>
-                <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#263b47"/>
-                  <stop offset=".52" stop-color="#13232c"/>
-                  <stop offset="1" stop-color="#0d151a"/>
-                </linearGradient>
-                <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#26221b"/>
-                  <stop offset="1" stop-color="#101112"/>
-                </linearGradient>
-                <filter id="soft-shadow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="16"/>
-                </filter>
-                <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-                  <feGaussianBlur stdDeviation="4" result="blur"/>
+                <filter id="globe-glow" x="-100%" y="-100%" width="300%" height="300%">
+                  <feGaussianBlur stdDeviation="5" result="blur"/>
                   <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                 </filter>
+                <clipPath id="globe-clip"><circle cx="400" cy="320" r="232"/></clipPath>
               </defs>
 
-              <ellipse class="scene-aura" cx="380" cy="330" rx="360" ry="290" fill="url(#scene-aura)"/>
-              <ellipse class="scene-shadow" cx="385" cy="505" rx="218" ry="48" fill="#000" opacity=".55" filter="url(#soft-shadow)"/>
-              <path class="orbit orbit-back" d="M96 332C125 164 259 92 384 94c146 1 253 81 281 217" fill="none" stroke="#f5a623" stroke-opacity=".13" stroke-width="1"/>
-              <path class="orbit orbit-front" d="M74 358c37 123 151 196 303 195 143-1 266-71 307-186" fill="none" stroke="#f5a623" stroke-opacity=".13" stroke-width="1"/>
+              <circle cx="400" cy="319" r="292" fill="url(#globe-aura)"/>
+              <ellipse class="globe-shadow" cx="400" cy="559" rx="186" ry="24"/>
+              <ellipse class="globe-orbit globe-orbit-back" cx="400" cy="320" rx="310" ry="124" transform="rotate(-23 400 320)"/>
+              <ellipse class="globe-orbit globe-orbit-front" cx="400" cy="320" rx="287" ry="93" transform="rotate(25 400 320)"/>
 
-              <g class="connections" fill="none" stroke-linecap="round">
-                <path class="connection-line" d="M152 153C221 169 253 222 315 282"/>
-                <path class="connection-line" d="M603 139C544 162 515 214 453 279"/>
-                <path class="connection-line" d="M143 437C217 414 251 384 307 363"/>
-                <path class="connection-line" d="M613 423C547 409 514 382 459 359"/>
-                <path class="connection-line connection-line-faint" d="M185 280C245 285 264 302 300 321"/>
-                <path class="connection-line connection-line-faint" d="M573 274C514 282 494 300 461 321"/>
-                <circle class="signal signal-one" cx="232" cy="203" r="4"/>
-                <circle class="signal signal-two" cx="541" cy="200" r="4"/>
-                <circle class="signal signal-three" cx="224" cy="410" r="4"/>
-                <circle class="signal signal-four" cx="535" cy="399" r="4"/>
+              <g class="globe-connections" fill="none">
+                <path d="M185 174C220 184 243 207 271 236"/>
+                <path d="M615 172C580 184 556 208 529 237"/>
+                <path d="M182 451C220 441 243 419 270 392"/>
+                <path d="M618 451C579 441 556 420 529 392"/>
               </g>
+              <circle class="globe-pulse pulse-one" cx="235" cy="207" r="4"/>
+              <circle class="globe-pulse pulse-two" cx="565" cy="207" r="4"/>
+              <circle class="globe-pulse pulse-three" cx="232" cy="423" r="4"/>
+              <circle class="globe-pulse pulse-four" cx="568" cy="423" r="4"/>
 
-              <g class="scene-node node-ai" transform="translate(42 105)">
-                <rect class="node-card" width="176" height="62" rx="17"/>
-                <circle class="node-icon-ring" cx="32" cy="31" r="18"/>
-                <path d="M32 18l3.8 8.2 8.8 1.1-6.4 6.2 1.6 8.7-7.8-4.4-7.8 4.4 1.5-8.7-6.3-6.2 8.8-1.1z" fill="#f5a623"/>
-                <text class="node-title" x="60" y="28">IA</text>
-                <text class="node-subtitle" x="60" y="44">TE ENTIENDE</text>
+              <g clip-path="url(#globe-clip)" class="globe-sphere">
+                <circle cx="400" cy="320" r="232" fill="url(#globe-surface)"/>
+                <path class="globe-land" d="M269 185c22-19 47-22 63-10l-3 16 18 10-7 19-18 4-12 20-24-5-12-20 3-16-15-7zm198 33 17-14 29 7 18 21-10 13-20-3-12 18-20-6-10-17 8-10zM302 375l25-12 20 9 18 22-9 18-17-3-14 17-19-8-12-24zm138 67 21-17 24 3 15 17-11 16-23 1-16-8z"/>
+                <path class="globe-latitude" d="M170 270c126 78 334 78 460 0M168 320c128 56 336 56 464 0M170 370c126-78 334-78 460 0"/>
+                <ellipse class="globe-longitude" cx="400" cy="320" rx="88" ry="232"/>
+                <ellipse class="globe-longitude globe-longitude-wide" cx="400" cy="320" rx="163" ry="232"/>
+                <circle cx="400" cy="320" r="232" fill="url(#globe-shade)"/>
+                <path d="M180 246c52-108 143-158 247-158" fill="none" stroke="#f2fff7" stroke-opacity=".22" stroke-width="2"/>
               </g>
-              <g class="scene-node node-cloud" transform="translate(535 83)">
-                <rect class="node-card" width="183" height="62" rx="17"/>
-                <circle class="node-icon-ring" cx="32" cy="31" r="18"/>
-                <path d="M23 35.5c-3.5 0-5.5-2.3-5.5-5.1 0-2.7 2-4.8 4.8-5.1 1.1-4 4.1-6.2 8.1-6.2 4.8 0 8 3.2 8.4 7.2 3.4.2 5.7 2.3 5.7 5.2 0 2.9-2.2 5-5.7 5z" fill="none" stroke="#f5a623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <text class="node-title" x="60" y="28">NUBE</text>
-                <text class="node-subtitle" x="60" y="44">SIEMPRE ONLINE</text>
-              </g>
-              <g class="scene-node node-maps" transform="translate(27 420)">
-                <rect class="node-card" width="189" height="62" rx="17"/>
-                <circle class="node-icon-ring" cx="32" cy="31" r="18"/>
-                <path d="M32 43s10-10.4 10-17.1a10 10 0 0 0-20 0C22 32.6 32 43 32 43z" fill="none" stroke="#f5a623" stroke-width="2"/>
-                <circle cx="32" cy="25.5" r="3.2" fill="#f5a623"/>
-                <text class="node-title" x="60" y="28">MAPS</text>
-                <text class="node-subtitle" x="60" y="44">TU ZONA Y SERVICIOS</text>
-              </g>
-              <g class="scene-node node-leads" transform="translate(541 411)">
-                <rect class="node-card" width="177" height="62" rx="17"/>
-                <circle class="node-icon-ring" cx="32" cy="31" r="18"/>
-                <circle cx="28" cy="26" r="4" fill="none" stroke="#f5a623" stroke-width="2"/>
-                <circle cx="37" cy="28" r="3" fill="none" stroke="#f5a623" stroke-width="2"/>
-                <path d="M20.5 39c.8-4.5 3.4-6.7 7.5-6.7s6.7 2.2 7.5 6.7m-1.5-5.8c3.4-.5 5.8 1.4 6.6 5.4" fill="none" stroke="#f5a623" stroke-width="2" stroke-linecap="round"/>
-                <text class="node-title" x="60" y="28">LEADS</text>
-                <text class="node-subtitle" x="60" y="44">NUEVAS CONSULTAS</text>
+              <circle class="globe-outline" cx="400" cy="320" r="232"/>
+
+              <g class="globe-business">
+                <circle cx="400" cy="320" r="59"/>
+                <path class="store-roof" d="M367 311h66l-8-23h-50z"/>
+                <path class="store-front" d="M373 312h54v38h-54z"/>
+                <path class="store-awning" d="M373 312h54v10h-54z"/>
+                <path class="store-window" d="M380 328h15v22h-15zm23 0h17v11h-17z"/>
+                <text x="400" y="371" text-anchor="middle">TU NEGOCIO</text>
               </g>
 
-              <g class="platform">
-                <path d="M380 358 603 464 380 570 157 464z" fill="url(#platform-top)" stroke="#f5a623" stroke-opacity=".45" stroke-width="1.4"/>
-                <path d="M157 464 380 570v22L157 486z" fill="url(#platform-side)" stroke="#8d5c1b" stroke-opacity=".55"/>
-                <path d="m380 570 223-106v22L380 592z" fill="#17130e" stroke="#8d5c1b" stroke-opacity=".55"/>
-                <path d="M199 464 380 550l181-86" fill="none" stroke="#f5a623" stroke-opacity=".2" stroke-width="1"/>
-                <path d="m247 463 25-12 36 17-25 12zm203 71 26-12 21 10-26 12z" fill="#f5a623" opacity=".12"/>
-                <circle cx="250" cy="480" r="3" fill="#f5a623" opacity=".6"/>
-                <circle cx="520" cy="461" r="3" fill="#f5a623" opacity=".6"/>
-                <circle cx="379" cy="551" r="3" fill="#f5a623" opacity=".8" filter="url(#glow)"/>
+              <g class="globe-node" transform="translate(31 151)">
+                <rect class="globe-node-card" width="154" height="46" rx="14"/>
+                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
+                <text class="globe-node-label" x="31" y="27">IA</text>
               </g>
-
-              <g class="shop-float">
-                <g class="business">
-                  <path d="m282 294 103-53 129 57-104 58z" fill="url(#roof)" stroke="#ffdb92" stroke-opacity=".8" stroke-width="1.2"/>
-                  <path d="m282 294 128 62v137l-128-64z" fill="url(#front-wall)" stroke="#443528" stroke-width="1"/>
-                  <path d="m410 356 104-58v135l-104 60z" fill="url(#side-wall)" stroke="#3e3022" stroke-width="1"/>
-                  <path d="m282 294 103-53 129 57-104 58z" fill="url(#roof)" opacity=".97"/>
-                  <path d="m303 294 82-42 104 47-82 43z" fill="#1a1713" opacity=".8"/>
-                  <path d="m310 295 75-38 96 43-75 38z" fill="#2b241b" stroke="#f5a623" stroke-opacity=".35"/>
-                  <path d="m306 315 86 42v7l-86-42z" fill="#e8921f" opacity=".72"/>
-                  <path d="m398 356 103-57v8l-103 57z" fill="#b97519" opacity=".74"/>
-                  <path d="m299 327 99 48v21l-99-48z" fill="#101112" stroke="#f5a623" stroke-opacity=".35"/>
-                  <text class="shop-sign" x="309" y="348" transform="rotate(25 309 348)">TU NEGOCIO</text>
-                  <path d="m294 384 98 47v59l-98-48z" fill="url(#glass)" stroke="#e5a643" stroke-opacity=".65" stroke-width="2"/>
-                  <path d="m342 407 2 1v60l-2-1z" fill="#d59b42" opacity=".7"/>
-                  <path d="m294 384 98 47v8l-98-47z" fill="#d08a26"/>
-                  <path d="m304 393 7 3v8l-7-3zm12 6 7 3v8l-7-3zm12 6 7 3v8l-7-3zm12 6 7 3v8l-7-3zm12 6 7 3v8l-7-3zm12 6 7 3v8l-7-3zm12 6 7 3v8l-7-3z" fill="#ffcf78"/>
-                  <path d="m407 401 80-45v81l-80 45z" fill="#111315" stroke="#d8902a" stroke-opacity=".55"/>
-                  <path d="m416 404 64-36v58l-64 36z" fill="url(#glass)"/>
-                  <path d="m425 410 46-26v4l-46 26zm0 11 46-26v3l-46 27zm0 11 31-18v3l-31 18z" fill="#83a5b3" opacity=".48"/>
-                  <path d="m407 472 80-45v10l-80 45z" fill="#f5a623" opacity=".72"/>
-                  <path d="m282 294 103-53v10l-103 53z" fill="#ffd47f" opacity=".7"/>
-                  <path d="m282 294 128 62v8l-128-62z" fill="#b8791a"/>
-                  <circle cx="381" cy="399" r="2.5" fill="#f5a623" filter="url(#glow)"/>
-                  <path class="window-glint" d="m302 391 77 37v6l-77-37z" fill="#e7f6ff" opacity=".17"/>
-                </g>
-
-                <g class="web-card">
-                  <path d="m445 214 85-42 92 43-85 43z" fill="#000" opacity=".32"/>
-                  <path d="m438 192 84-42 92 43-84 43z" fill="url(#screen)" stroke="#f5a623" stroke-opacity=".58"/>
-                  <path d="m438 192 92 43v70l-92-43z" fill="#171819" stroke="#5d4828" stroke-opacity=".7"/>
-                  <path d="m530 235 84-42v70l-84 42z" fill="#101112" stroke="#5d4828" stroke-opacity=".7"/>
-                  <path d="m450 193 72-36 79 37-71 36z" fill="#17191b"/>
-                  <circle cx="461" cy="193" r="2" fill="#f05e49"/>
-                  <circle cx="468" cy="196" r="2" fill="#f4c653"/>
-                  <circle cx="475" cy="199" r="2" fill="#59bd7d"/>
-                  <path d="m454 207 34-17 5 2-34 18z" fill="#f5a623"/>
-                  <path d="m454 214 45 21v3l-45-21zm0 7 33 16v3l-33-16z" fill="#6c7379"/>
-                  <path d="m495 235 20-10v4l-20 10z" fill="#f5a623" opacity=".9"/>
-                  <path d="m548 224 48-24v3l-48 24zm0 9 35-17v3l-35 18z" fill="#8a9399" opacity=".52"/>
-                  <text class="web-card-label" x="548" y="252">TU WEB</text>
-                </g>
+              <g class="globe-node globe-node-cloud" transform="translate(615 148)">
+                <rect class="globe-node-card" width="154" height="46" rx="14"/>
+                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
+                <text class="globe-node-label" x="31" y="27">NUBE</text>
               </g>
-
-              <g class="status-chip" transform="translate(307 518)">
-                <rect width="146" height="38" rx="19"/>
-                <circle cx="20" cy="19" r="4" fill="#70d59b"/>
-                <text x="34" y="23">NEGOCIO VISIBLE</text>
+              <g class="globe-node globe-node-maps" transform="translate(22 428)">
+                <rect class="globe-node-card" width="160" height="46" rx="14"/>
+                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
+                <text class="globe-node-label" x="31" y="27">MAPS</text>
+              </g>
+              <g class="globe-node globe-node-leads" transform="translate(618 428)">
+                <rect class="globe-node-card" width="160" height="46" rx="14"/>
+                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
+                <text class="globe-node-label" x="31" y="27">LEADS</text>
               </g>
             </svg>
-            <div class="scene-note"><span class="scene-note-icon" aria-hidden="true">↗</span> Una presencia. Muchos puntos de contacto.</div>
           </div>
         </div>
         <div class="hero-bottom container">
-          <span>DESLIZÁ PARA VER CÓMO SE CONECTA</span>
+          <span>DESLIZÁ PARA DESCUBRIR TODO EL ECOSISTEMA</span>
           <span class="scroll-line" aria-hidden="true"></span>
           <span>01 — 03</span>
         </div>
