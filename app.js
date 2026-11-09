@@ -28,7 +28,20 @@ const validTrades = new Set([
   "gasista",
   "techista",
   "albanil",
+  "fumigador",
+  "vidriero",
+  "zinguero",
 ]);
+const demoUrls = {
+  electricista: "https://tuwebentresdias.github.io/demo-electricista/",
+  plomero: "https://tuwebentresdias.github.io/demo-plomero/",
+  pintor: "https://tuwebentresdias.github.io/demo-pintor/",
+  gasista: "https://tuweben3dias.com/gasista/",
+  techista: "https://tuwebentresdias.github.io/demo-techista/",
+  fumigador: "https://tuwebentresdias.github.io/demo-fumigador/",
+  vidriero: "https://tuwebentresdias.github.io/demo-vidriero/",
+  zinguero: "https://tuwebentresdias.github.io/demo-zinguero/",
+};
 
 if (demoForm && tradeSelect) {
   demoForm.addEventListener("submit", (event) => {
@@ -43,8 +56,8 @@ if (demoForm && tradeSelect) {
     }
 
     tradeSelect.removeAttribute("aria-invalid");
-    const demoUrl = new URL(trade, "https://tuweben3dias.com/");
-    window.open(demoUrl.href, "_blank", "noopener,noreferrer");
+    const demoUrl = demoUrls[trade] || new URL(trade, "https://tuweben3dias.com/").href;
+    window.open(demoUrl, "_blank", "noopener,noreferrer");
     if (demoStatus) demoStatus.textContent = "Abrimos la demo en otra pestaña. No enviamos datos personales.";
   });
 
