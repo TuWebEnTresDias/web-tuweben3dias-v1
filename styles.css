@@ -867,3 +867,21 @@ h2 {
 .trust-focus-motion .trust-card { opacity: .48; transform: scale(.90); filter: blur(3px); pointer-events: auto; transition: opacity .35s ease, transform .4s ease, filter .35s ease; }
 .trust-focus-motion .trust-card.is-focused { opacity: 1; transform: scale(1); filter: none; }
 @media (prefers-reduced-motion: reduce) { .trust-card { opacity: 1 !important; transform: none !important; filter: none !important; } }
+
+/* Pie de página basado en tuweben3dias.com */
+.site-footer { background: #0a0a0a; border-top: 1px solid #222; }
+.footer-container { width: min(100% - 48px, 1152px); margin: 0 auto; padding: 64px 0; }
+.footer-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; margin-bottom: 48px; }
+.footer-logo { display: inline-block; margin-bottom: 16px; color: #fff; font: 900 24px/1.3 "Plus Jakarta Sans", sans-serif; letter-spacing: -.04em; }
+.footer-logo span { color: #f5a623; }
+.footer-columns p, .footer-columns a:not(.footer-logo), .footer-bottom { color: #888; font-size: 14px; line-height: 1.625; }
+.footer-columns p { margin: 0; }
+.footer-columns h4 { color: #fff; font: 600 16px/1.5 "Plus Jakarta Sans", sans-serif; margin: 0 0 16px; }
+.footer-columns ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.footer-columns a, .footer-bottom a { text-decoration: none; transition: color .2s; }
+.footer-columns a:hover, .footer-bottom a:hover { color: #f5a623; }
+.footer-bottom { border-top: 1px solid #222; padding-top: 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.footer-bottom p { margin: 0; }
+.footer-bottom p:last-child { font-size: 12px; color: #555; }
+@media (max-width: 767px) { .footer-columns { grid-template-columns: 1fr; } }
+@media (max-width: 639px) { .footer-container { width: calc(100% - 32px); } .footer-bottom { flex-direction: column; text-align: center; } }
