@@ -900,7 +900,7 @@ h2 {
 .hero .eyebrow { margin-bottom: clamp(8px, 1.3vh, 15px); }
 #inicio h1 { font-size: clamp(2.7rem, min(6vw, 8.5vh), 5.7rem); margin-bottom: clamp(8px, 1.3vh, 16px); }
 .hero-lede { margin-bottom: clamp(10px, 1.6vh, 20px); line-height: 1.45; }
-.hero-visual { width: min(100%, 900px); height: clamp(250px, 42svh, 490px); margin: 0 auto; }
+.hero-visual { width: min(100%, 900px); height: clamp(250px, 44svh, 490px); margin: 0 auto; }
 .hero-visual::before { inset: 5% 12% -10%; filter: blur(25px); background: radial-gradient(ellipse, rgba(41,213,185,.18), rgba(245,166,35,.08) 40%, transparent 70%); }
 .globe-land { fill: #8ceac9; stroke: #c5fff0; stroke-opacity: .26; stroke-width: .7; }
 .globe-latitude, .globe-longitude { opacity: .25; }
@@ -1159,8 +1159,8 @@ h2 {
 .globe-node-maps .globe-node-icon { stroke: #8bceff; }
 .globe-node-icon circle { fill: #83f2d8; stroke: none; }
 .globe-node-maps .globe-node-icon circle { fill: #8bceff; }
-.globe-node-label { fill: #f6fbf9; font: 750 13px Inter, sans-serif; letter-spacing: .75px; }
-.globe-node-detail { fill: #aab8b8; font: 500 8.4px Inter, sans-serif; letter-spacing: 0; }
+.globe-node-label { fill: #f6fbf9; font: 750 14.5px Inter, sans-serif; letter-spacing: .75px; }
+.globe-node-detail { fill: #aab8b8; font: 500 9.1px Inter, sans-serif; letter-spacing: 0; }
 .globe-node-status { fill: #75ebbd; filter: url(#globe-glow); }
 .globe-node-cloud .globe-node-status, .globe-node-leads .globe-node-status { fill: #ffd078; }
 .globe-node-maps .globe-node-status { fill: #8bceff; }
