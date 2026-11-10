@@ -70,6 +70,19 @@ document.querySelectorAll("#demo-form, #closing-demo-form").forEach((demoForm) =
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const sceneFrame = document.querySelector("[data-scene-frame]");
 
+const heroVisual = document.querySelector(".hero-visual");
+if (heroVisual && !prefersReducedMotion.matches && "IntersectionObserver" in window) {
+  const heroVisibilityObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        heroVisual.classList.toggle("is-in-view", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.08 },
+  );
+  heroVisibilityObserver.observe(heroVisual);
+}
+
 if (sceneFrame && !prefersReducedMotion.matches) {
   sceneFrame.addEventListener("pointermove", (event) => {
     if (event.pointerType !== "mouse") return;
