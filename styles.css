@@ -1099,3 +1099,26 @@ h2 {
     transition: none;
   }
 }
+
+
+/* Planes unificados con precio y CTA de WhatsApp */
+.service-plan-card { display: flex; flex-direction: column; }
+.service-plan-list { flex: 1 1 auto; }
+.service-plan-offer { margin-top: auto; padding-top: 19px; border-top: 1px solid rgba(255,255,255,.1); }
+.service-plan-price-label { display: block; color: #9da1a4; font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.service-plan-price-row { display: flex; align-items: baseline; gap: 7px; margin-top: 3px; }
+.service-plan-price-row strong { font-size: clamp(1.8rem, 2.5vw, 2.25rem); line-height: 1.15; letter-spacing: -.06em; }
+.service-plan-price-row > span { color: #a1a5a6; font-size: .72rem; }
+.service-plan-cta { width: 100%; min-height: 48px; margin-top: 15px; justify-content: space-between; color: #06200f; background: #25d366; box-shadow: 0 9px 24px rgba(37,211,102,.12); }
+.service-plan-cta:hover { background: #42df7a; box-shadow: 0 10px 28px rgba(37,211,102,.2); }
+.service-plan-cta:focus-visible { outline: 2px solid #a8ffc5; outline-offset: 3px; }
+.service-plan-note { max-width: 820px; margin: 24px auto 0; color: #9da1a4; font-size: .75rem; text-align: center; }
+
+/* Acuerdos: el texto acompaña el scroll como en FAQs */
+.trust-layout { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1fr); align-items: start; gap: clamp(38px, 6vw, 86px); }
+.trust-heading { position: sticky; top: 95px; align-self: start; max-width: 800px; margin-bottom: 0; }
+.trust-grid { min-width: 0; grid-template-columns: minmax(0, 1fr); align-content: start; }
+@media (max-width: 900px) {
+  .trust-layout { grid-template-columns: 1fr; gap: 30px; }
+  .trust-heading { position: static; }
+}
