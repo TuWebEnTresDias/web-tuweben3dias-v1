@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=portfolio-captures-2">
-    <script src="./app.js?v=closing-demo-1" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=hero-orbit-1">
+    <script src="./app.js?v=hero-orbit-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -109,6 +109,11 @@
                 </filter>
                 <radialGradient id="planet-rim"><stop offset=".69" stop-color="#5cf5d2" stop-opacity="0"/><stop offset=".93" stop-color="#76ffe8" stop-opacity=".12"/><stop offset="1" stop-color="#8cfff0" stop-opacity=".8"/></radialGradient>
                 <radialGradient id="planet-light" cx="25%" cy="17%" r="72%"><stop stop-color="#e4fff4" stop-opacity=".68"/><stop offset=".28" stop-color="#4ef8cd" stop-opacity=".18"/><stop offset="1" stop-color="#001923" stop-opacity="0"/></radialGradient>
+                <linearGradient id="globe-node-surface" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#172a2a"/>
+                  <stop offset=".58" stop-color="#101a1d"/>
+                  <stop offset="1" stop-color="#111315"/>
+                </linearGradient>
                 <clipPath id="globe-clip"><circle cx="400" cy="320" r="232"/></clipPath>
               </defs>
 
@@ -128,10 +133,12 @@
               <circle class="globe-pulse pulse-three" cx="232" cy="423" r="4"/>
               <circle class="globe-pulse pulse-four" cx="568" cy="423" r="4"/>
 
-              <g clip-path="url(#globe-clip)" class="globe-sphere">
+              <g class="globe-body" transform="translate(400 320) scale(1.06) translate(-400 -320)">
+                <g clip-path="url(#globe-clip)" class="globe-sphere">
                 <circle cx="400" cy="320" r="232" fill="url(#globe-surface)"/>
                 <rect x="168" y="88" width="464" height="464" filter="url(#planet-texture)" opacity=".58"/>
-                <g class="globe-land" opacity=".64">
+                <g class="globe-rotating-surface">
+                  <g class="globe-land" opacity=".64">
                   <path d="M211 187l20-16 23-11 26 4 10-12 20 6 12 12 24 4 13 14-4 13 15 9-6 13-18 4-9 13-16-3-8 16-11 2-2 19-13 12-13-10-6-14-16-4-4-17-17-5-7-16-18-5 1-14z"/>
                   <path d="M300 302l19 4 15 12 21-3 19 12 6 19-12 19-4 27-14 18-8 28-13 16-9-8-3-27-9-18-2-22-13-17-2-24-9-16z"/>
                   <path d="M408 191l19-17 26 2 14-10 29 5 15 15 24-2 21 13 20 3 23 22-7 15-23-2-16 11-22-4-16 12-20-5-14 11-18-8-10 12-16-7-13 5-14-14-14-1-6-15z"/>
@@ -139,11 +146,12 @@
                   <path d="M521 392l19-14 22 4 18 14 5 18-18 8-19-5-14 4-17-12z"/>
                   <path d="M380 160l8-10 12 3 4 10-10 8zM582 356l7-6 8 10-5 12-7-3z"/>
                 </g>
-                <rect class="planet-clouds" x="168" y="88" width="464" height="464" filter="url(#cloud-texture)" opacity=".27"/>
+                  <rect class="planet-clouds" x="168" y="88" width="464" height="464" filter="url(#cloud-texture)" opacity=".27"/>
+                  <path class="globe-latitude" d="M170 270c126 78 334 78 460 0M168 320c128 56 336 56 464 0M170 370c126-78 334-78 460 0"/>
+                  <ellipse class="globe-longitude" cx="400" cy="320" rx="88" ry="232"/>
+                  <ellipse class="globe-longitude globe-longitude-wide" cx="400" cy="320" rx="163" ry="232"/>
+                </g>
                 <circle cx="400" cy="320" r="232" fill="url(#planet-light)"/>
-                <path class="globe-latitude" d="M170 270c126 78 334 78 460 0M168 320c128 56 336 56 464 0M170 370c126-78 334-78 460 0"/>
-                <ellipse class="globe-longitude" cx="400" cy="320" rx="88" ry="232"/>
-                <ellipse class="globe-longitude globe-longitude-wide" cx="400" cy="320" rx="163" ry="232"/>
                 <circle cx="400" cy="320" r="232" fill="url(#globe-shade)"/>
                 <path d="M180 246c52-108 143-158 247-158" fill="none" stroke="#f2fff7" stroke-opacity=".22" stroke-width="2"/>
               </g>
@@ -158,26 +166,52 @@
                 <path class="store-window" d="M380 328h15v22h-15zm23 0h17v11h-17z"/>
                 <text x="400" y="371" text-anchor="middle">TU NEGOCIO</text>
               </g>
+              </g>
 
-              <g class="globe-node" transform="translate(31 151)">
-                <rect class="globe-node-card" width="154" height="46" rx="14"/>
-                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
-                <text class="globe-node-label" x="31" y="27">IA</text>
+              <g class="globe-node globe-node-ai" transform="translate(0 145)">
+                <rect class="globe-node-card" width="180" height="70" rx="18"/>
+                <rect class="globe-node-icon-bg" x="12" y="15" width="40" height="40" rx="13"/>
+                <g class="globe-node-icon" transform="translate(32 35)">
+                  <path d="M-8-5h5l3-3h5l3 3v4L5 2v4H0L-3 3h-5z"/>
+                  <path d="M-11-2h3M-3-10v2M9-5l3-2M8 8l2 2"/>
+                  <circle cx="1" cy="-1" r="1.25"/>
+                </g>
+                <text class="globe-node-label" x="61" y="31">SEO + IA</text>
+                <text class="globe-node-detail" x="61" y="48">Estructura para encontrarte</text>
+                <circle class="globe-node-status" cx="164" cy="19" r="3"/>
               </g>
-              <g class="globe-node globe-node-cloud" transform="translate(615 148)">
-                <rect class="globe-node-card" width="154" height="46" rx="14"/>
-                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
-                <text class="globe-node-label" x="31" y="27">NUBE</text>
+              <g class="globe-node globe-node-cloud" transform="translate(620 145)">
+                <rect class="globe-node-card" width="180" height="70" rx="18"/>
+                <rect class="globe-node-icon-bg" x="12" y="15" width="40" height="40" rx="13"/>
+                <g class="globe-node-icon" transform="translate(32 35)">
+                  <path d="M-9 4h17a4 4 0 0 0 .1-8 6 6 0 0 0-11-1A4.5 4.5 0 0 0-9 4z"/>
+                  <path d="M-4 8h8"/>
+                </g>
+                <text class="globe-node-label" x="61" y="31">WEB + NUBE</text>
+                <text class="globe-node-detail" x="61" y="48">Dominio · hosting · SSL</text>
+                <circle class="globe-node-status" cx="164" cy="19" r="3"/>
               </g>
-              <g class="globe-node globe-node-maps" transform="translate(22 428)">
-                <rect class="globe-node-card" width="160" height="46" rx="14"/>
-                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
-                <text class="globe-node-label" x="31" y="27">MAPS</text>
+              <g class="globe-node globe-node-maps" transform="translate(0 425)">
+                <rect class="globe-node-card" width="180" height="70" rx="18"/>
+                <rect class="globe-node-icon-bg" x="12" y="15" width="40" height="40" rx="13"/>
+                <g class="globe-node-icon" transform="translate(32 35)">
+                  <path d="M0 10s-8-7-8-12a8 8 0 1 1 16 0c0 5-8 12-8 12z"/>
+                  <circle cx="0" cy="-2" r="2.4"/>
+                </g>
+                <text class="globe-node-label" x="61" y="31">GOOGLE MAPS</text>
+                <text class="globe-node-detail" x="61" y="48">Zona · horarios · reseñas</text>
+                <circle class="globe-node-status" cx="164" cy="19" r="3"/>
               </g>
-              <g class="globe-node globe-node-leads" transform="translate(618 428)">
-                <rect class="globe-node-card" width="160" height="46" rx="14"/>
-                <circle class="globe-node-dot" cx="17" cy="23" r="4"/>
-                <text class="globe-node-label" x="31" y="27">LEADS</text>
+              <g class="globe-node globe-node-leads" transform="translate(620 425)">
+                <rect class="globe-node-card" width="180" height="70" rx="18"/>
+                <rect class="globe-node-icon-bg" x="12" y="15" width="40" height="40" rx="13"/>
+                <g class="globe-node-icon" transform="translate(32 35)">
+                  <circle cx="-2" cy="-4" r="4"/>
+                  <path d="M-10 8c.5-5 3-7 8-7s7.5 2 8 7M8-5v8M4-1h8"/>
+                </g>
+                <text class="globe-node-label" x="61" y="31">LEADS</text>
+                <text class="globe-node-detail" x="61" y="48">WhatsApp · teléfono · form</text>
+                <circle class="globe-node-status" cx="164" cy="19" r="3"/>
               </g>
             </svg>
           </div>
