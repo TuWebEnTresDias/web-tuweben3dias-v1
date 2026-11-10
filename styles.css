@@ -948,3 +948,10 @@ h2 {
 .trust-card:nth-child(even){background:linear-gradient(145deg,rgba(88,210,180,.09),rgba(18,20,22,.95) 72%)}
 @media(max-width:800px){.transformation-panel{grid-template-columns:1fr;gap:4px;margin-bottom:48px}.transformation-arrow{justify-self:center;transform:rotate(90deg)}.transformation-side-ready{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:24px 10px 10px}.feature-grid-tiles .feature-tile,.feature-grid-tiles .feature-tile:nth-child(1),.feature-grid-tiles .feature-tile:nth-child(7){grid-column:span 6}.trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.feature-grid-tiles .feature-tile,.feature-grid-tiles .feature-tile:nth-child(1),.feature-grid-tiles .feature-tile:nth-child(7){grid-column:1/-1}.trust-grid{grid-template-columns:1fr}}
+
+.closing-demo-picker{width:min(100%,640px);margin:30px auto 16px;text-align:left}
+.closing-demo-picker .demo-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px}
+.closing-demo-picker .demo-status{text-align:center}
+.closing-demo-picker select{min-width:0}
+.closing-demo-picker .button{white-space:nowrap}
+@media(max-width:560px){.closing-demo-picker .demo-controls{grid-template-columns:1fr}.closing-demo-picker .button{width:100%;justify-content:center}}
