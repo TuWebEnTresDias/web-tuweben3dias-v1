@@ -18,9 +18,6 @@ if (menuToggle && mobileNav) {
   });
 }
 
-const demoForm = document.querySelector("#demo-form");
-const tradeSelect = document.querySelector("#trade");
-const demoStatus = document.querySelector("#demo-status");
 const validTrades = new Set([
   "plomero",
   "electricista",
@@ -43,7 +40,11 @@ const demoUrls = {
   zinguero: "https://tuwebentresdias.github.io/demo-zinguero/",
 };
 
-if (demoForm && tradeSelect) {
+document.querySelectorAll("#demo-form, #closing-demo-form").forEach((demoForm) => {
+  const tradeSelect = demoForm.querySelector("select");
+  const demoStatus = demoForm.querySelector(".demo-status");
+  if (!tradeSelect) return;
+
   demoForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const trade = tradeSelect.value;
@@ -65,8 +66,7 @@ if (demoForm && tradeSelect) {
     tradeSelect.removeAttribute("aria-invalid");
     if (demoStatus) demoStatus.textContent = "La demo se abre en tuweben3dias.com; no enviamos datos personales.";
   });
-}
-
+});
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const sceneFrame = document.querySelector("[data-scene-frame]");
 
