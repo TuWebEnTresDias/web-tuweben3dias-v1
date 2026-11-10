@@ -893,3 +893,33 @@ h2 {
 .portfolio-cta { display: flex; justify-content: center; margin-top: 32px; }
 .portfolio-cta a { display: inline-flex; align-items: center; gap: 12px; padding: 14px 24px; border-radius: 12px; background: #f5a623; color: #111; font-weight: 700; text-decoration: none; transition: background .2s, transform .2s; }
 .portfolio-cta a:hover { background: #ffc35b; transform: translateY(-2px); }
+
+/* Hero: pantalla completa y planeta con atmósfera y profundidad */
+.hero { min-height: 100svh; padding: 92px 0 40px; overflow: hidden; }
+.hero-grid { flex: 1; width: 100%; justify-content: center; }
+.hero .eyebrow { margin-bottom: clamp(8px, 1.3vh, 15px); }
+#inicio h1 { font-size: clamp(2.7rem, min(6vw, 8.5vh), 5.7rem); margin-bottom: clamp(8px, 1.3vh, 16px); }
+.hero-lede { margin-bottom: clamp(10px, 1.6vh, 20px); line-height: 1.45; }
+.hero-visual { width: min(100%, 900px); height: clamp(250px, 42svh, 490px); margin: 0 auto; }
+.hero-visual::before { inset: 5% 12% -10%; filter: blur(25px); background: radial-gradient(ellipse, rgba(41,213,185,.18), rgba(245,166,35,.08) 40%, transparent 70%); }
+.globe-land { fill: #8ceac9; stroke: #c5fff0; stroke-opacity: .26; stroke-width: .7; }
+.globe-latitude, .globe-longitude { opacity: .25; }
+.globe-outline { stroke: #9cfff0; stroke-opacity: .72; filter: drop-shadow(0 0 8px #37dbbe); }
+.planet-clouds { animation: planet-cloud-drift 22s ease-in-out infinite alternate; }
+.globe-connections path { stroke-dasharray: 4 9; animation-duration: 8s; }
+@keyframes planet-cloud-drift { from { transform: translateX(-5px); } to { transform: translateX(8px); } }
+@media (max-width: 760px) {
+  .hero { min-height: 100svh; padding: 84px 0 42px; }
+  .hero-grid { gap: 0; }
+  #inicio h1 { font-size: clamp(2.35rem, min(8.5vw, 6.6svh), 4rem); margin-bottom: 10px; }
+  .hero .eyebrow { margin-bottom: 9px; }
+  .hero-lede { margin-bottom: 12px; }
+  .hero-visual { width: min(calc(100% + 24px), 620px); height: clamp(220px, 37svh, 420px); aspect-ratio: auto; margin: 0 -12px; }
+  .hero-bottom { bottom: 14px; }
+}
+@media (max-height: 650px) {
+  .hero { min-height: 100svh; padding-top: 82px; }
+  .hero-visual { height: 230px; }
+  .hero-bottom { position: static; margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .planet-clouds { animation: none; } }
