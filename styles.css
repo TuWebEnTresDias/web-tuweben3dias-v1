@@ -955,3 +955,69 @@ h2 {
 .closing-demo-picker select{min-width:0}
 .closing-demo-picker .button{white-space:nowrap}
 @media(max-width:560px){.closing-demo-picker .demo-controls{grid-template-columns:1fr}.closing-demo-picker .button{width:100%;justify-content:center}}
+
+
+/* Ajustes de jerarquía y lectura de la landing */
+.process-heading { max-width: 760px; margin: 0 0 36px; text-align: left; }
+.trust-section > .container { display: block; }
+.trust-heading { position: static; max-width: 800px; margin-bottom: 38px; }
+.trust-grid { grid-template-columns: 1fr; gap: 14px; }
+.trust-card { width: 100%; min-height: 0; padding: 26px 30px; }
+.trust-focus-motion .trust-card { opacity: .42; transform: none; filter: blur(2px); }
+.trust-focus-motion .trust-card.is-focused { opacity: 1; transform: none; filter: none; }
+.has-motion .trust-card, .has-motion .trust-card.is-visible { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .trust-focus-motion .trust-card, .trust-focus-motion .trust-card.is-focused { opacity: 1; transform: none; filter: none; }
+}
+
+/* Beneficios agrupados como franjas amplias con vistas reales de las demos */
+.feature-stories { display: grid; gap: 16px; }
+.feature-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  align-items: stretch;
+  gap: clamp(28px, 5vw, 72px);
+  min-height: 310px;
+  padding: clamp(24px, 4vw, 48px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  background: linear-gradient(110deg, rgba(245,166,35,.08), rgba(18,20,22,.94) 54%, rgba(20,24,24,.98));
+}
+.feature-story:nth-child(even) { border-color: rgba(67,211,182,.2); background: linear-gradient(110deg, rgba(67,211,182,.08), rgba(18,20,22,.94) 54%, rgba(20,24,24,.98)); }
+.feature-story-copy { align-self: center; max-width: 620px; }
+.feature-story-index { display: block; margin-bottom: 13px; color: var(--amber); font-size: .65rem; font-weight: 750; letter-spacing: .13em; }
+.feature-story h3 { max-width: 570px; margin: 0 0 12px; font-size: clamp(1.45rem, 2.5vw, 2.15rem); line-height: 1.16; letter-spacing: -.045em; }
+.feature-story-copy > p { max-width: 550px; margin-bottom: 20px; color: #a4a9aa; font-size: .88rem; }
+.feature-points { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.feature-points li { padding: 7px 11px; border: 1px solid rgba(255,255,255,.11); border-radius: 999px; color: #d6d8d6; background: rgba(255,255,255,.035); font-size: .7rem; }
+.feature-story-visual { position: relative; min-height: 220px; overflow: hidden; align-self: center; border: 1px solid rgba(255,255,255,.14); border-radius: 17px; background: #0c1112; box-shadow: 0 18px 42px rgba(0,0,0,.25); }
+.feature-story-visual::before { position: absolute; z-index: 1; inset: 0; content: ""; pointer-events: none; background: linear-gradient(180deg, transparent 55%, rgba(8,9,11,.8)); }
+.feature-story-visual img { display: block; width: 100%; height: 100%; min-height: 220px; object-fit: cover; object-position: top center; }
+.feature-visual-caption { position: absolute; z-index: 2; right: 16px; bottom: 13px; left: 16px; color: #f3f3ef; font-size: .69rem; font-weight: 650; letter-spacing: .03em; }
+@media (max-width: 760px) {
+  .feature-story { grid-template-columns: 1fr; gap: 20px; min-height: 0; padding: 24px; }
+  .feature-story-visual, .feature-story-visual img { min-height: 200px; max-height: 250px; }
+  .feature-story h3 { font-size: 1.55rem; }
+}
+
+/* Capturas de demos: pantalla completa dentro de la tarjeta, sin el velo oscuro que las tapaba */
+.portfolio-card { padding: 0; }
+.portfolio-card::after { background: linear-gradient(180deg, rgba(8,9,11,0) 0%, rgba(8,9,11,.02) 55%, rgba(8,9,11,.86) 100%); }
+.portfolio-image { inset: 0 0 116px; width: 100%; height: calc(100% - 116px); object-fit: contain !important; object-position: center top !important; opacity: 1; background: #101214 !important; }
+.portfolio-card-index { position: absolute; top: 18px; left: 20px; }
+.portfolio-card-bottom { z-index: 2; margin: auto 22px 0; padding: 15px 0 20px; }
+
+/* Selector y acción con idéntico ancho; WhatsApp con su verde característico */
+.closing-demo-picker { width: min(100%, 640px); }
+.closing-demo-picker .demo-controls { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
+.closing-demo-picker select, .closing-demo-picker .button { width: 100%; min-width: 0; }
+.closing-demo-picker .button { justify-content: center; }
+.closing-button { border-color: #25d366; color: #07150b; background: #25d366; }
+.closing-button:hover { border-color: #36e277; color: #07150b; background: #36e277; }
+@media (max-width: 560px) {
+  .closing-demo-picker .demo-controls { grid-template-columns: 1fr; }
+  .closing-demo-picker select, .closing-demo-picker .button { width: 100%; }
+  .trust-card { padding: 22px; }
+  .portfolio-image { inset-bottom: 106px; height: calc(100% - 106px); }
+}
