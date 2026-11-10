@@ -1129,15 +1129,17 @@ h2 {
 .globe-rotating-surface {
   transform-box: view-box;
   transform-origin: 400px 320px;
-  animation: globe-surface-turn 78s linear infinite;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  animation: globe-axis-spin 78s linear infinite;
   animation-play-state: paused;
   will-change: transform;
 }
 .hero-visual:not(.is-in-view) .business-scene * { animation-play-state: paused; }
 .hero-visual.is-in-view .business-scene * { animation-play-state: running; }
-@keyframes globe-surface-turn {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes globe-axis-spin {
+  from { transform: perspective(900px) rotateY(0deg); }
+  to { transform: perspective(900px) rotateY(360deg); }
 }
 .globe-node-card {
   fill: url(#globe-node-surface);
