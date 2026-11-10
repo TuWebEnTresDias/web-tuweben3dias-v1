@@ -862,3 +862,8 @@ h2 {
   filter: blur(0);
   pointer-events: auto;
 }
+
+/* El scroll destaca una garantía y mantiene las demás visibles. */
+.trust-focus-motion .trust-card { opacity: .48; transform: scale(.90); filter: blur(3px); pointer-events: auto; transition: opacity .35s ease, transform .4s ease, filter .35s ease; }
+.trust-focus-motion .trust-card.is-focused { opacity: 1; transform: scale(1); filter: none; }
+@media (prefers-reduced-motion: reduce) { .trust-card { opacity: 1 !important; transform: none !important; filter: none !important; } }
