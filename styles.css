@@ -829,3 +829,21 @@ h2 {
 .comparison-row-instagram .comparison-badge-muted { border-color: rgba(255,95,155,.26); }
 .comparison-row-maps .comparison-badge-muted { border-color: rgba(66,133,244,.26); }
 .comparison-row-facebook .comparison-badge-muted { border-color: rgba(64,145,255,.26); }
+
+
+/* Las garantías se iluminan al entrar en el foco del scroll */
+.has-motion .trust-card {
+  opacity: .14;
+  transform: translateY(24px) scale(.975);
+  filter: blur(1.5px) saturate(.78);
+  transition: opacity .55s ease, transform .65s cubic-bezier(.2,.7,.2,1), filter .55s ease, border-color .3s ease;
+  transition-delay: 0ms;
+}
+.has-motion .trust-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0) saturate(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .has-motion .trust-card { opacity: 1; transform: none; filter: none; }
+}
