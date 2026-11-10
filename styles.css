@@ -1123,3 +1123,49 @@ h2 {
   .trust-layout { grid-template-columns: 1fr; gap: 30px; }
   .trust-heading { position: static; }
 }
+
+
+/* Planeta del hero: rotación solo visible y nodos con más presencia */
+.globe-rotating-surface {
+  transform-box: view-box;
+  transform-origin: 400px 320px;
+  animation: globe-surface-turn 78s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+.hero-visual:not(.is-in-view) .business-scene * { animation-play-state: paused; }
+.hero-visual.is-in-view .business-scene * { animation-play-state: running; }
+@keyframes globe-surface-turn {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.globe-node-card {
+  fill: url(#globe-node-surface);
+  stroke: rgba(105, 238, 213, .86);
+  stroke-width: 1.6;
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, .38)) drop-shadow(0 0 9px rgba(74, 225, 198, .16));
+}
+.globe-node-cloud .globe-node-card,
+.globe-node-leads .globe-node-card {
+  stroke: rgba(255, 190, 74, .92);
+  filter: drop-shadow(0 5px 12px rgba(0, 0, 0, .38)) drop-shadow(0 0 9px rgba(255, 174, 45, .2));
+}
+.globe-node-maps .globe-node-card { stroke: rgba(112, 194, 255, .92); filter: drop-shadow(0 5px 12px rgba(0,0,0,.38)) drop-shadow(0 0 9px rgba(75,165,255,.18)); }
+.globe-node-icon-bg { fill: rgba(70, 224, 195, .12); stroke: rgba(100, 241, 216, .36); stroke-width: 1; }
+.globe-node-cloud .globe-node-icon-bg, .globe-node-leads .globe-node-icon-bg { fill: rgba(255, 177, 48, .12); stroke: rgba(255, 191, 79, .35); }
+.globe-node-maps .globe-node-icon-bg { fill: rgba(82, 169, 255, .12); stroke: rgba(114, 194, 255, .38); }
+.globe-node-icon { fill: none; stroke: #83f2d8; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.globe-node-cloud .globe-node-icon, .globe-node-leads .globe-node-icon { stroke: #ffd078; }
+.globe-node-maps .globe-node-icon { stroke: #8bceff; }
+.globe-node-icon circle { fill: #83f2d8; stroke: none; }
+.globe-node-maps .globe-node-icon circle { fill: #8bceff; }
+.globe-node-label { fill: #f6fbf9; font: 750 13px Inter, sans-serif; letter-spacing: .75px; }
+.globe-node-detail { fill: #aab8b8; font: 500 8.4px Inter, sans-serif; letter-spacing: 0; }
+.globe-node-status { fill: #75ebbd; filter: url(#globe-glow); }
+.globe-node-cloud .globe-node-status, .globe-node-leads .globe-node-status { fill: #ffd078; }
+.globe-node-maps .globe-node-status { fill: #8bceff; }
+@media (prefers-reduced-motion: reduce) {
+  .globe-rotating-surface,
+  .hero-visual .business-scene * { animation: none !important; }
+  .business-scene { transform: none !important; }
+}
