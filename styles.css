@@ -847,3 +847,18 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .has-motion .trust-card { opacity: 1; transform: none; filter: none; }
 }
+
+
+/* Fuera del foco, las garantías desaparecen por completo */
+.has-motion .trust-card {
+  opacity: 0;
+  transform: translateY(24px) scale(.96);
+  filter: blur(2px);
+  pointer-events: none;
+}
+.has-motion .trust-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  pointer-events: auto;
+}
