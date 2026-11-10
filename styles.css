@@ -923,3 +923,5 @@ h2 {
   .hero-bottom { position: static; margin-top: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { .planet-clouds { animation: none; } }
+
+@media (max-height: 650px) { .hero-bottom { display: none; } }
