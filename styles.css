@@ -1171,3 +1171,112 @@ h2 {
   .hero-visual .business-scene * { animation: none !important; }
   .business-scene { transform: none !important; }
 }
+
+
+/* Escala tipográfica ampliada: más presencia en títulos y mejor lectura del texto */
+body { font-size: 1.02rem; line-height: 1.68; }
+.eyebrow, .section-kicker { font-size: .75rem; }
+.section-kicker { margin-bottom: 22px; }
+#inicio h1 { font-size: clamp(3.15rem, min(6.45vw, 9vh), 6.15rem); line-height: 1.02; }
+.hero-lede { max-width: 800px; font-size: clamp(1.08rem, 1.38vw, 1.22rem); line-height: 1.68; }
+.demo-picker label { font-size: .78rem; }
+.demo-controls select { font-size: 1rem; }
+.demo-status { font-size: .74rem; }
+.button { font-size: .98rem; }
+
+h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
+.comparison-heading h2, .trust-heading h2, .faq-heading h2,
+.service-plans-heading h2, .features-heading h2, .portfolio-heading h2 {
+  font-size: clamp(2.65rem, 5vw, 4.2rem);
+  line-height: 1.08;
+}
+.demos-hero h1 { font-size: clamp(3.15rem, 6.2vw, 5.35rem); line-height: 1.04; }
+.showcase-heading h2 { font-size: clamp(2.55rem, 4.5vw, 3.6rem); line-height: 1.08; }
+.closing-inner h2 { font-size: clamp(3.05rem, 6.25vw, 5.25rem); line-height: 1.04; }
+
+.intro-copy,
+.comparison-heading > p, .trust-heading > p, .faq-heading > p,
+.features-heading > p, .service-plans-heading > p,
+.offer-copy > p, .demos-hero > .container p,
+.showcase-heading > p, .closing-inner > p {
+  font-size: 1rem;
+  line-height: 1.72;
+}
+.journey-card h3 { font-size: 1.2rem; }
+.journey-card p { font-size: .9rem; line-height: 1.7; }
+.comparison-name { font-size: 1rem; }
+.comparison-row p { font-size: .9rem; line-height: 1.72; }
+.feature-card h3 { font-size: 1.24rem; }
+.feature-card p { font-size: .9rem; line-height: 1.7; }
+.feature-tile h3 { font-size: 1.08rem; }
+.feature-tile p { font-size: .84rem; line-height: 1.68; }
+.feature-story h3 { font-size: clamp(1.65rem, 2.7vw, 2.35rem); line-height: 1.14; }
+.feature-story-copy > p { font-size: .96rem; line-height: 1.72; }
+.feature-points li { font-size: .78rem; }
+.service-plan-header h3 { font-size: clamp(1.35rem, 2vw, 1.7rem); }
+.service-plan-header p { font-size: .88rem; line-height: 1.65; }
+.service-plan-feature { font-size: .84rem; line-height: 1.55; }
+.service-plan-value { font-size: .72rem; }
+.service-plan-price-label { font-size: .66rem; }
+.service-plan-price-row strong { font-size: clamp(2rem, 2.8vw, 2.4rem); }
+.service-plan-price-row > span { font-size: .8rem; }
+.service-plan-note { font-size: .82rem; line-height: 1.65; }
+.portfolio-card-bottom strong { font-size: 1.1rem; }
+.portfolio-card-bottom small { font-size: .78rem; }
+.offer-copy > p { font-size: 1rem; }
+.offer-list { font-size: .92rem; line-height: 1.7; }
+.trust-card h3 { font-size: 1.13rem; }
+.trust-card p { font-size: .9rem; line-height: 1.72; }
+.faq-item summary { font-size: .92rem; }
+.faq-item p { font-size: .88rem; line-height: 1.72; }
+.showcase-card h3 { font-size: 1.2rem; }
+.showcase-card p { font-size: .84rem; line-height: 1.7; }
+.showcase-link { font-size: .84rem; }
+.demos-cta p { font-size: .96rem; line-height: 1.7; }
+.closing-tag { font-size: .7rem; }
+.footer-inner p, .footer-copy, .footer-columns p,
+.footer-columns a:not(.footer-logo) { font-size: .78rem; line-height: 1.65; }
+.footer-bottom p:last-child { font-size: .74rem; }
+
+@media (max-width: 760px) {
+  #inicio h1 { font-size: clamp(2.75rem, 9vw, 4.45rem); line-height: 1.04; }
+  .hero-lede { font-size: 1rem; }
+  h2 { font-size: clamp(2.4rem, 8.4vw, 3.65rem); }
+  .comparison-heading h2, .trust-heading h2, .faq-heading h2,
+  .service-plans-heading h2, .features-heading h2, .portfolio-heading h2 {
+    font-size: clamp(2.4rem, 8.2vw, 3.65rem);
+  }
+  .demos-hero h1 { font-size: clamp(2.85rem, 10.5vw, 4.25rem); }
+  .showcase-heading h2 { font-size: clamp(2.35rem, 8vw, 3.3rem); }
+  .closing-inner h2 { font-size: clamp(2.8rem, 9.4vw, 4.25rem); }
+  .intro-copy, .comparison-heading > p, .trust-heading > p, .faq-heading > p,
+  .features-heading > p, .service-plans-heading > p, .offer-copy > p,
+  .demos-hero > .container p, .showcase-heading > p, .closing-inner > p {
+    font-size: .96rem;
+  }
+  .journey-card h3 { font-size: 1.1rem; }
+  .journey-card p, .feature-card p, .feature-tile p, .trust-card p { font-size: .86rem; }
+  .feature-card h3, .trust-card h3 { font-size: 1.12rem; }
+  .feature-tile h3 { font-size: 1.02rem; }
+  .feature-story h3 { font-size: 1.55rem; }
+  .feature-story-copy > p { font-size: .92rem; }
+  .service-plan-header h3 { font-size: 1.4rem; }
+  .service-plan-header p { font-size: .86rem; }
+  .service-plan-feature { font-size: .82rem; }
+  .service-plan-value { font-size: .7rem; }
+  .portfolio-card-bottom strong { font-size: 1.02rem; }
+  .portfolio-card-bottom small { font-size: .74rem; }
+  .offer-list { font-size: .88rem; }
+  .faq-item summary { font-size: .9rem; }
+  .faq-item p, .showcase-card p { font-size: .84rem; }
+  .showcase-card h3 { font-size: 1.08rem; }
+  .button { font-size: .96rem; }
+}
+@media (max-width: 420px) {
+  h2 { font-size: clamp(2.3rem, 9.2vw, 3rem); }
+  .comparison-heading h2, .trust-heading h2, .faq-heading h2,
+  .service-plans-heading h2, .features-heading h2, .portfolio-heading h2 {
+    font-size: clamp(2.3rem, 9vw, 3.05rem);
+  }
+  .closing-inner h2 { font-size: clamp(2.7rem, 10vw, 3.4rem); }
+}
