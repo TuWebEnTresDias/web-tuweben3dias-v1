@@ -1280,3 +1280,53 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
   }
   .closing-inner h2 { font-size: clamp(2.7rem, 10vw, 3.4rem); }
 }
+
+
+/* Jerarquía de encabezados y hero en dos columnas */
+#como-funciona .section-kicker { margin-bottom: 12px; }
+.intro-grid { align-items: start; }
+.comparison-heading { width: 100%; max-width: none; }
+.comparison-heading h2,
+.comparison-heading > p { width: 100%; max-width: none; }
+
+@media (min-width: 1180px) and (min-height: 720px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+    align-items: center;
+    gap: clamp(34px, 3vw, 56px);
+    text-align: left;
+  }
+
+  .hero-copy { max-width: none; }
+  .hero .eyebrow { justify-content: flex-start; }
+
+  #inicio h1 {
+    max-width: none;
+    margin: 0 0 clamp(12px, 1.4vw, 20px);
+    font-size: clamp(3.1rem, 3.25vw, 4.15rem);
+    line-height: 1.02;
+  }
+
+  .hero-lede {
+    max-width: none;
+    margin: 0 0 clamp(14px, 1.6vw, 22px);
+  }
+
+  .demo-picker { margin: 0; }
+  .demo-status { text-align: left; }
+
+  .hero-visual {
+    width: 100%;
+    max-width: none;
+    height: clamp(500px, 65svh, 700px);
+    margin: 0;
+  }
+
+  .hero-visual .business-scene {
+    width: 138%;
+    height: 100%;
+    max-width: none;
+    margin-left: -19%;
+  }
+}
