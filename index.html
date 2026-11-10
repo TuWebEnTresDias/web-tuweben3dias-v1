@@ -502,8 +502,23 @@
         <div class="container closing-inner reveal">
           <div class="closing-tag"><span class="status-dot"></span> TU PRÓXIMO PASO</div>
           <h2 id="closing-title">Hagamos que sea<br><span>fácil encontrarte.</span></h2>
-          <p>Contanos qué hacés y te orientamos para empezar.</p>
-          <a class="button button-primary closing-button" href="https://wa.me/+5491128326511?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20la%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp <span aria-hidden="true">↗</span></a>
+          <p>Elegí tu rubro, recorré una demo y después contanos qué necesitás.</p>
+          <form class="demo-picker closing-demo-picker" id="closing-demo-form">
+            <label for="closing-trade">Explorá una demo por rubro</label>
+            <div class="demo-controls">
+              <select id="closing-trade" name="trade" required>
+                <option value="" selected disabled>Seleccioná un rubro</option>
+                <option value="plomero">Plomero</option><option value="electricista">Electricista</option>
+                <option value="pintor">Pintor</option><option value="gasista">Gasista</option>
+                <option value="techista">Techista</option><option value="albanil">Albañil</option>
+                <option value="fumigador">Fumigador</option><option value="vidriero">Vidriero</option>
+                <option value="zinguero">Zinguero</option>
+              </select>
+              <button class="button button-primary" type="submit">Ver demo <span aria-hidden="true">↗</span></button>
+            </div>
+            <p class="demo-status" id="closing-demo-status" aria-live="polite">Sin registro: elegí un rubro y abrí su demo.</p>
+          </form>
+          <a class="button button-secondary closing-button" href="https://wa.me/+5491128326511?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20la%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp <span aria-hidden="true">↗</span></a>
         </div>
       </section>
     </main>
