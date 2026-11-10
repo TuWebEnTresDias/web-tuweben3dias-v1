@@ -1001,11 +1001,12 @@ h2 {
   .feature-story h3 { font-size: 1.55rem; }
 }
 
-/* Capturas de demos: pantalla completa dentro de la tarjeta, sin el velo oscuro que las tapaba */
-.portfolio-card { padding: 0; }
-.portfolio-card::after { background: linear-gradient(180deg, rgba(8,9,11,0) 0%, rgba(8,9,11,.02) 55%, rgba(8,9,11,.86) 100%); }
+/* Capturas de demos: se muestra más contenido de cada web, sin recortar ni oscurecer */
+.portfolio-card { min-height: 380px; padding: 0; }
+.portfolio-card::after { display: none; }
 .portfolio-image { inset: 0 0 116px; width: 100%; height: calc(100% - 116px); object-fit: contain !important; object-position: center top !important; opacity: 1; background: #101214 !important; }
-.portfolio-card-index { position: absolute; top: 18px; left: 20px; }
+.portfolio-card:hover .portfolio-image { transform: none; opacity: 1; }
+.portfolio-card-index { position: absolute; top: 18px; left: 20px; padding: 5px 9px; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; color: #fff; background: rgba(8,9,11,.68); backdrop-filter: blur(8px); }
 .portfolio-card-bottom { z-index: 2; margin: auto 22px 0; padding: 15px 0 20px; }
 
 /* Selector y acción con idéntico ancho; WhatsApp con su verde característico */
