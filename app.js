@@ -102,15 +102,25 @@ if (!prefersReducedMotion.matches && "IntersectionObserver" in window && revealE
   revealElements.forEach((element) => observer.observe(element));
 }
 
-const trustCards = document.querySelectorAll(".trust-card");
-if (!prefersReducedMotion.matches && "IntersectionObserver" in window && trustCards.length) {
-  const trustObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle("is-visible", entry.isIntersecting && entry.intersectionRatio > 0);
-      });
-    },
-    { threshold: 0, rootMargin: "-34% 0px -34% 0px" },
-  );
-  trustCards.forEach((card) => trustObserver.observe(card));
+const trustCards = [...document.querySelectorAll(".trust-card")];
+if (!prefersReducedMotion.matches && trustCards.length) {
+  document.documentElement.classList.add("trust-focus-motion");
+  let scheduled = false;
+  const updateTrustFocus = () => {
+    scheduled = false;
+    const focusLine = window.innerHeight * 0.5;
+    let nearest = null, distance = Infinity;
+    trustCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const d = Math.abs(rect.top + rect.height / 2 - focusLine);
+      if (d < distance) { distance = d; nearest = card; }
+    });
+    trustCards.forEach(card => card.classList.toggle("is-focused", card === nearest));
+  };
+  const scheduleTrustFocus = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(updateTrustFocus); }
+  };
+  window.addEventListener("scroll", scheduleTrustFocus, { passive: true });
+  window.addEventListener("resize", scheduleTrustFocus);
+  updateTrustFocus();
 }
