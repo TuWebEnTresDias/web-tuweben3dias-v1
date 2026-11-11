@@ -1441,3 +1441,122 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
   .demo-dialog[open] { animation: none; }
   .demo-trade-option { transition: none; }
 }
+
+
+/* Hero cósmico: más aire entre el texto, el planeta y sus conexiones */
+.hero { isolation: isolate; }
+.hero-cosmos {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 77% 43%, rgba(42, 205, 190, .14), transparent 34%),
+    radial-gradient(ellipse at 93% 67%, rgba(83, 96, 239, .12), transparent 31%),
+    radial-gradient(ellipse at 14% 70%, rgba(150, 74, 205, .09), transparent 29%),
+    radial-gradient(ellipse at 47% 5%, rgba(245, 166, 35, .055), transparent 25%);
+}
+.hero-cosmos::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: .66;
+  background-image:
+    radial-gradient(1px 1px at 7% 16%, rgba(255,255,255,.92) 99%, transparent),
+    radial-gradient(1.4px 1.4px at 17% 68%, rgba(119,238,220,.95) 99%, transparent),
+    radial-gradient(1px 1px at 23% 31%, rgba(255,255,255,.7) 99%, transparent),
+    radial-gradient(1.2px 1.2px at 31% 83%, rgba(255,196,91,.8) 99%, transparent),
+    radial-gradient(1px 1px at 39% 13%, rgba(255,255,255,.8) 99%, transparent),
+    radial-gradient(1px 1px at 45% 72%, rgba(133,196,255,.9) 99%, transparent),
+    radial-gradient(1.5px 1.5px at 53% 24%, rgba(255,255,255,.9) 99%, transparent),
+    radial-gradient(1px 1px at 62% 88%, rgba(255,255,255,.62) 99%, transparent),
+    radial-gradient(1.2px 1.2px at 71% 15%, rgba(119,238,220,.82) 99%, transparent),
+    radial-gradient(1px 1px at 79% 76%, rgba(255,255,255,.82) 99%, transparent),
+    radial-gradient(1.5px 1.5px at 87% 28%, rgba(255,195,91,.9) 99%, transparent),
+    radial-gradient(1px 1px at 95% 57%, rgba(255,255,255,.72) 99%, transparent),
+    radial-gradient(1px 1px at 11% 47%, rgba(255,255,255,.6) 99%, transparent),
+    radial-gradient(1.2px 1.2px at 27% 91%, rgba(116,216,255,.78) 99%, transparent),
+    radial-gradient(1px 1px at 35% 52%, rgba(255,255,255,.68) 99%, transparent),
+    radial-gradient(1.4px 1.4px at 58% 61%, rgba(255,196,91,.8) 99%, transparent),
+    radial-gradient(1px 1px at 67% 38%, rgba(255,255,255,.74) 99%, transparent),
+    radial-gradient(1px 1px at 91% 90%, rgba(128,243,224,.75) 99%, transparent);
+  background-repeat: no-repeat;
+  animation: starfield-glimmer 8s ease-in-out infinite alternate;
+}
+.hero-cosmos::after {
+  position: absolute;
+  inset: -12%;
+  content: "";
+  opacity: .48;
+  background:
+    radial-gradient(ellipse at 72% 48%, rgba(33, 205, 185, .1), transparent 30%),
+    radial-gradient(ellipse at 89% 76%, rgba(91, 102, 238, .09), transparent 28%),
+    radial-gradient(ellipse at 21% 62%, rgba(153, 79, 213, .075), transparent 26%);
+  filter: blur(32px);
+  animation: nebula-drift 22s ease-in-out infinite alternate;
+}
+.shooting-star {
+  position: absolute;
+  z-index: 1;
+  width: clamp(105px, 10vw, 170px);
+  height: 2px;
+  border-radius: 999px;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, rgba(94, 228, 219, .2) 46%, #f1ffff 100%);
+  filter: drop-shadow(0 0 4px rgba(100, 240, 222, .95));
+  transform-origin: right center;
+  animation: cosmic-shoot 13s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.shooting-star::after {
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  background: #fff;
+  box-shadow: 0 0 9px 3px rgba(115, 255, 233, .72);
+}
+.shooting-star-one { top: 15%; left: 18%; }
+.shooting-star-two {
+  top: 35%;
+  left: 59%;
+  width: clamp(85px, 8vw, 135px);
+  background: linear-gradient(90deg, transparent, rgba(255, 184, 72, .2) 46%, #fff8e9 100%);
+  filter: drop-shadow(0 0 4px rgba(255, 177, 58, .9));
+  animation-duration: 17s;
+  animation-delay: 5s;
+}
+.shooting-star-two::after { box-shadow: 0 0 9px 3px rgba(255, 180, 65, .72); }
+.hero.is-in-view .shooting-star { animation-play-state: running; }
+@keyframes cosmic-shoot {
+  0%, 78% { opacity: 0; transform: translate3d(0, 0, 0) rotate(28deg) scaleX(.68); }
+  80% { opacity: .92; }
+  87%, 100% { opacity: 0; transform: translate3d(230px, 132px, 0) rotate(28deg) scaleX(1); }
+}
+@keyframes starfield-glimmer { from { opacity: .42; } to { opacity: .78; } }
+@keyframes nebula-drift { from { transform: translate3d(-1%, .5%, 0) scale(1); } to { transform: translate3d(1%, -.5%, 0) scale(1.045); } }
+
+@media (min-width: 1180px) and (min-height: 720px) {
+  #inicio .hero-grid {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: clamp(52px, 4.2vw, 78px);
+  }
+  #inicio .globe-node-ai,
+  #inicio .globe-node-maps { translate: 42px 0; }
+}
+@media (max-width: 760px) {
+  .hero-cosmos { background-position: center; }
+  .hero-cosmos::before { opacity: .45; }
+  .hero-cosmos::after { opacity: .32; filter: blur(48px); }
+  .shooting-star-one { top: 14%; left: 66%; width: 92px; }
+  .shooting-star-two { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cosmos::before,
+  .hero-cosmos::after,
+  .shooting-star { animation: none !important; }
+}
