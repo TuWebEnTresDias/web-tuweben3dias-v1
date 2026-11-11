@@ -1123,20 +1123,11 @@ h2 {
 }
 
 
-/* Planeta del hero: rotación solo visible y nodos con más presencia */
-.globe-rotating-surface {
-  transform-box: view-box;
-  transform-origin: 0 0;
-  animation: globe-axis-spin 78s linear infinite;
-  animation-play-state: paused;
-  will-change: transform;
-}
-.hero-visual:not(.is-in-view) .business-scene * { animation-play-state: paused; }
-.hero-visual.is-in-view .business-scene * { animation-play-state: running; }
-@keyframes globe-axis-spin {
-  from { transform: translateX(0); }
-  to { transform: translateX(-58%); }
-}
+/* Planeta fijo: el mapa queda centrado en Argentina, sin giros ni inclinación */
+.globe-rotating-surface { animation: none !important; transform: none !important; will-change: auto; }
+.globe-orbit-front { animation: none !important; }
+.business-scene { transform: none !important; transition: none !important; }
+
 .globe-node-card {
   fill: url(#globe-node-surface);
   stroke: rgba(105, 238, 213, .86);
@@ -1557,4 +1548,85 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
   .hero-cosmos::before,
   .hero-cosmos::after,
   .shooting-star { animation: none !important; }
+}
+
+
+/* Esfera de red local: servicios conectados alrededor de Argentina */
+.argentina-network-sphere {
+  fill: url(#argentina-network-fill);
+  stroke: rgba(131, 255, 227, .88);
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 13px rgba(69, 239, 205, .28));
+}
+.argentina-network-latitude,
+.argentina-network-longitude {
+  fill: none;
+  stroke: rgba(202, 255, 244, .36);
+  stroke-width: 1;
+}
+.argentina-network-longitude { opacity: .64; }
+.argentina-network-links {
+  fill: none;
+  stroke: rgba(255, 197, 91, .78);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-dasharray: 2 6;
+}
+.argentina-network-dot {
+  fill: #9bffe4;
+  stroke: #092b2a;
+  stroke-width: 2;
+  filter: url(#globe-glow);
+}
+.argentina-network-dot:nth-of-type(even) { fill: #ffc65d; }
+.argentina-link path {
+  fill: none;
+  stroke: rgba(129, 243, 218, .82);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 8;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(85, 230, 202, .5));
+  animation: data-flow 11s linear infinite;
+}
+.argentina-link path:nth-child(even) {
+  stroke: rgba(255, 190, 72, .88);
+  animation-delay: -2s;
+}
+.argentina-link-pulse {
+  fill: #fff0bf;
+  filter: url(#globe-glow);
+  animation: signal-pulse 2.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.argentina-marker-shape {
+  fill: #f5a623;
+  stroke: #fff0c8;
+  stroke-width: 1.2;
+  filter: drop-shadow(0 0 12px rgba(255, 169, 36, .72));
+}
+.argentina-marker-core { fill: #071617; stroke: rgba(255,255,255,.86); stroke-width: 1; }
+.argentina-marker-store { fill: #8cebd1; stroke: #e5fff7; stroke-width: 1; }
+.argentina-marker-roof { fill: #fff6df; }
+.argentina-location-ring {
+  fill: none;
+  stroke: #ffe0a0;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: argentina-location-pulse 2.4s ease-out infinite;
+}
+.argentina-location-label {
+  fill: #f2fff9;
+  font: 750 8px Inter, sans-serif;
+  letter-spacing: 1.1px;
+}
+@keyframes argentina-location-pulse {
+  0% { opacity: .8; transform: scale(.72); }
+  100% { opacity: 0; transform: scale(1.65); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .argentina-link path,
+  .argentina-link-pulse,
+  .argentina-location-ring { animation: none !important; }
 }
