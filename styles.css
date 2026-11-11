@@ -1341,7 +1341,8 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
 }
 
 
-/* En mobile, separa los controles del hero de los bordes de pantalla */
+/* En mobile, agrega aire lateral al título y a los controles del hero */
 @media (max-width: 760px) {
+  #inicio h1 { margin-inline: 16px; }
   #inicio .demo-controls { margin-inline: 16px; }
 }
