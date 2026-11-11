@@ -1346,3 +1346,13 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
   #inicio h1 { margin-inline: 16px; }
   #inicio .demo-controls { margin-inline: 16px; }
 }
+
+/* El título del hero respira mejor en pantallas angostas */
+@media (max-width: 480px) {
+  #inicio h1 {
+    font-size: clamp(2.25rem, 9vw, 2.8rem);
+    line-height: 1.12;
+    letter-spacing: -.04em;
+    word-spacing: .015em;
+  }
+}
