@@ -156,22 +156,6 @@ if (heroVisual && !prefersReducedMotion.matches && "IntersectionObserver" in win
   heroVisibilityObserver.observe(heroVisual);
 }
 
-if (sceneFrame && !prefersReducedMotion.matches) {
-  sceneFrame.addEventListener("pointermove", (event) => {
-    if (event.pointerType !== "mouse") return;
-    const bounds = sceneFrame.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-    sceneFrame.style.setProperty("--tilt-x", (x * 3.2).toFixed(2) + "deg");
-    sceneFrame.style.setProperty("--tilt-y", (y * -2.4).toFixed(2) + "deg");
-  });
-
-  sceneFrame.addEventListener("pointerleave", () => {
-    sceneFrame.style.setProperty("--tilt-x", "0deg");
-    sceneFrame.style.setProperty("--tilt-y", "0deg");
-  });
-}
-
 const revealElements = document.querySelectorAll(".reveal:not(.trust-card)");
 if (!prefersReducedMotion.matches && "IntersectionObserver" in window && revealElements.length) {
   document.documentElement.classList.add("has-motion");
