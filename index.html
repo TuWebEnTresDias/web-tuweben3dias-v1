@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=argentina-network-1">
+    <link rel="stylesheet" href="./styles.css?v=argentina-network-2">
     <script src="./app.js?v=static-world-2" defer></script>
   </head>
   <body>
@@ -93,7 +93,7 @@
           <div class="hero-visual" data-scene-frame>
             <svg class="business-scene" viewBox="0 0 800 620" role="img" aria-labelledby="scene-title scene-desc">
               <title id="scene-title">Argentina como centro de una red digital para tu negocio</title>
-              <desc id="scene-desc">Un planeta fijo orientado hacia Latinoamérica, con un marcador en Argentina y una esfera de red que conecta el negocio con SEO e inteligencia artificial, la web y la nube, Google Maps y nuevos leads.</desc>
+              <desc id="scene-desc">Un planeta fijo con Latinoamérica ampliada, un marcador en Capital Federal y una esfera de red que conecta el negocio con SEO e inteligencia artificial, la web y la nube, Google Maps y nuevos leads.</desc>
               <defs>
                 <radialGradient id="globe-surface" cx="32%" cy="23%" r="78%">
                   <stop offset="0" stop-color="#c8f5df"/>
@@ -154,7 +154,7 @@
                 <circle cx="400" cy="320" r="232" fill="url(#globe-surface)"/>
                 <rect x="168" y="88" width="464" height="464" filter="url(#planet-texture)" opacity=".58"/>
                 <rect class="planet-clouds" x="168" y="88" width="464" height="464" filter="url(#cloud-texture)" opacity=".27"/>
-                <g class="globe-rotating-surface" transform="translate(62 -56)">
+                <g class="globe-rotating-surface" transform="translate(400 355) scale(1.28) translate(-400 -355) translate(62 -56)">
                   <g class="globe-map-tile">
                     <g id="globe-land-tile" class="globe-land" opacity=".64">
                   <path d="M211 187l20-16 23-11 26 4 10-12 20 6 12 12 24 4 13 14-4 13 15 9-6 13-18 4-9 13-16-3-8 16-11 2-2 19-13 12-13-10-6-14-16-4-4-17-17-5-7-16-18-5 1-14z"/>
@@ -181,20 +181,20 @@
               <circle class="globe-outline" cx="400" cy="320" r="232"/>
 
               <g class="argentina-network">
-                <circle class="argentina-network-sphere" cx="400" cy="365" r="112"/>
-                <ellipse class="argentina-network-latitude" cx="400" cy="365" rx="108" ry="43"/>
-                <ellipse class="argentina-network-longitude" cx="400" cy="365" rx="49" ry="109"/>
-                <circle class="argentina-network-latitude" cx="400" cy="365" r="78" stroke-dasharray="2 8"/>
+                <circle class="argentina-network-sphere" cx="400" cy="355" r="112"/>
+                <ellipse class="argentina-network-latitude" cx="400" cy="355" rx="108" ry="43"/>
+                <ellipse class="argentina-network-longitude" cx="400" cy="355" rx="49" ry="109"/>
+                <circle class="argentina-network-latitude" cx="400" cy="355" r="78" stroke-dasharray="2 8"/>
                 <path class="argentina-network-links" d="M341 307L400 365L457 300M400 365L474 351M400 365L444 423M400 365L385 438M400 365L328 397M341 307L457 300L474 351L444 423L385 438L328 397Z"/>
-                <circle class="argentina-network-dot" cx="341" cy="307" r="5"/>
-                <circle class="argentina-network-dot" cx="400" cy="290" r="5"/>
-                <circle class="argentina-network-dot" cx="457" cy="300" r="5"/>
-                <circle class="argentina-network-dot" cx="474" cy="351" r="5"/>
-                <circle class="argentina-network-dot" cx="444" cy="423" r="5"/>
-                <circle class="argentina-network-dot" cx="385" cy="438" r="5"/>
-                <circle class="argentina-network-dot" cx="328" cy="397" r="5"/>
+                <circle class="argentina-network-dot" cx="341" cy="297" r="5"/>
+                <circle class="argentina-network-dot" cx="400" cy="280" r="5"/>
+                <circle class="argentina-network-dot" cx="457" cy="290" r="5"/>
+                <circle class="argentina-network-dot" cx="474" cy="341" r="5"/>
+                <circle class="argentina-network-dot" cx="444" cy="413" r="5"/>
+                <circle class="argentina-network-dot" cx="385" cy="428" r="5"/>
+                <circle class="argentina-network-dot" cx="328" cy="387" r="5"/>
               </g>
-              <g class="globe-business argentina-marker">
+              <g class="globe-business argentina-marker" transform="translate(0 -10)" aria-label="Capital Federal, Argentina">
                 <circle class="argentina-location-ring" cx="400" cy="365" r="24"/>
                 <path class="argentina-marker-shape" d="M400 365C394 356 375 337 375 318a25 25 0 1 1 50 0c0 19-19 38-25 47z"/>
                 <circle class="argentina-marker-core" cx="400" cy="317" r="16"/>
@@ -203,17 +203,21 @@
                 <path fill="#f5a623" d="M391 318h18v4h-18z"/>
                 <path fill="#102627" d="M394 322h4v9h-4zm7 0h5v4h-5z"/>
               </g>
+              <g class="argentina-location-label" transform="translate(410 364)" aria-hidden="true">
+                <rect width="112" height="21" rx="10.5"/>
+                <text x="56" y="14">CAPITAL FEDERAL</text>
+              </g>
               </g>
               <g class="globe-connections argentina-link" fill="none">
-                <path d="M249 182C277 202 282 250 318 286"/>
-                <path d="M550 182C523 202 518 250 482 286"/>
-                <path d="M249 462C277 447 285 449 318 450"/>
-                <path d="M550 462C523 447 515 449 482 450"/>
+                <path d="M249 182C277 202 282 240 318 276"/>
+                <path d="M550 182C523 202 518 240 482 276"/>
+                <path d="M249 462C277 447 285 439 318 440"/>
+                <path d="M550 462C523 447 515 439 482 440"/>
               </g>
-              <circle class="argentina-link-pulse" cx="318" cy="286" r="3.5"/>
-              <circle class="argentina-link-pulse" cx="482" cy="286" r="3.5" style="animation-delay:.65s"/>
-              <circle class="argentina-link-pulse" cx="318" cy="450" r="3.5" style="animation-delay:1.3s"/>
-              <circle class="argentina-link-pulse" cx="482" cy="450" r="3.5" style="animation-delay:1.95s"/>
+              <circle class="argentina-link-pulse" cx="318" cy="276" r="3.5"/>
+              <circle class="argentina-link-pulse" cx="482" cy="276" r="3.5" style="animation-delay:.65s"/>
+              <circle class="argentina-link-pulse" cx="318" cy="440" r="3.5" style="animation-delay:1.3s"/>
+              <circle class="argentina-link-pulse" cx="482" cy="440" r="3.5" style="animation-delay:1.95s"/>
               <g class="globe-node globe-node-ai" transform="translate(0 145)">
                 <rect class="globe-node-card" width="250" height="74" rx="19"/>
                 <rect class="globe-node-icon-bg" x="12" y="15" width="44" height="44" rx="14"/>
