@@ -1554,9 +1554,9 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
 /* Esfera de red local: servicios conectados alrededor de Argentina */
 .argentina-network-sphere {
   fill: url(#argentina-network-fill);
-  stroke: rgba(131, 255, 227, .88);
-  stroke-width: 1.6;
-  filter: drop-shadow(0 0 13px rgba(69, 239, 205, .28));
+  stroke: #f5a623;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 0 13px rgba(245, 166, 35, .36));
 }
 .argentina-network-latitude,
 .argentina-network-longitude {
