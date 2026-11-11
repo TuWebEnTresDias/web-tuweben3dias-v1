@@ -1543,10 +1543,8 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
 @media (min-width: 1180px) and (min-height: 720px) {
   #inicio .hero-grid {
     grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    gap: clamp(52px, 4.2vw, 78px);
+    gap: clamp(62px, 4.8vw, 84px);
   }
-  #inicio .globe-node-ai,
-  #inicio .globe-node-maps { translate: 42px 0; }
 }
 @media (max-width: 760px) {
   .hero-cosmos { background-position: center; }
