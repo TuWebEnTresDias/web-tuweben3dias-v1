@@ -1334,6 +1334,7 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
 
 @media (min-width: 1180px) and (min-height: 720px) {
   .hero-grid {
+    flex: 0 1 auto;
     width: min(var(--container), calc(100% - 52px));
     margin-inline: auto;
   }
