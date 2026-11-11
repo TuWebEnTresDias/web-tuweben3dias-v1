@@ -1616,10 +1616,17 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
   transform-origin: center;
   animation: argentina-location-pulse 2.4s ease-out infinite;
 }
-.argentina-location-label {
-  fill: #f2fff9;
+.argentina-location-label rect {
+  fill: rgba(8, 18, 19, .94);
+  stroke: rgba(255, 190, 72, .9);
+  stroke-width: 1;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, .35));
+}
+.argentina-location-label text {
+  fill: #fff4d8;
   font: 750 8px Inter, sans-serif;
-  letter-spacing: 1.1px;
+  letter-spacing: .85px;
+  text-anchor: middle;
 }
 @keyframes argentina-location-pulse {
   0% { opacity: .8; transform: scale(.72); }
