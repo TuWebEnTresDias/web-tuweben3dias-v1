@@ -1125,8 +1125,8 @@ h2 {
 
 /* Planeta del hero: rotación solo visible y nodos con más presencia */
 .globe-rotating-surface {
-  transform-box: fill-box;
-  transform-origin: center;
+  transform-box: view-box;
+  transform-origin: 0 0;
   animation: globe-axis-spin 78s linear infinite;
   animation-play-state: paused;
   will-change: transform;
@@ -1135,7 +1135,7 @@ h2 {
 .hero-visual.is-in-view .business-scene * { animation-play-state: running; }
 @keyframes globe-axis-spin {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to { transform: translateX(-58%); }
 }
 .globe-node-card {
   fill: url(#globe-node-surface);
