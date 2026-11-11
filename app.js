@@ -69,9 +69,14 @@ if (
     zinguero: "🪚",
   };
 
-  [...heroTradeSelect.options]
-    .filter((option) => option.value)
-    .forEach((option) => {
+  const tradeOptions = [...heroTradeSelect.options].filter((option) => option.value);
+  const priorityTrades = ["vidriero", "electricista", "techista"];
+  const orderedTradeOptions = [
+    ...priorityTrades.map((trade) => tradeOptions.find((option) => option.value === trade)).filter(Boolean),
+    ...tradeOptions.filter((option) => !priorityTrades.includes(option.value)),
+  ];
+
+  orderedTradeOptions.forEach((option) => {
       const button = document.createElement("button");
       button.className = "demo-trade-option";
       button.type = "button";
