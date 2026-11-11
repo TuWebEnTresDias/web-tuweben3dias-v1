@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=mobile-hero-balance-2">
-    <script src="./app.js?v=hero-orbit-1" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=mobile-demo-grid-1">
+    <script src="./app.js?v=mobile-demo-grid-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -65,8 +65,25 @@
                 </select>
                 <button class="button button-primary" type="submit">Ver demo <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4.5 10h10.75M10 4.75 15.25 10 10 15.25"/></svg></button>
               </div>
+              <button class="button button-primary mobile-demo-trigger" id="mobile-demo-trigger" type="button" aria-haspopup="dialog" aria-controls="mobile-demo-dialog">
+                Ver demo
+                <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4.5 10h10.75M10 4.75 15.25 10 10 15.25"/></svg>
+              </button>
               <p class="demo-status" id="demo-status" aria-live="polite">Sin registro: elegí un rubro y abrí su demo.</p>
             </form>
+            <dialog class="demo-dialog" id="mobile-demo-dialog" aria-labelledby="mobile-demo-title">
+              <div class="demo-dialog-panel">
+                <div class="demo-dialog-heading">
+                  <div>
+                    <p class="demo-dialog-kicker">DEMOS POR RUBRO</p>
+                    <h2 id="mobile-demo-title">Elegí tu rubro</h2>
+                  </div>
+                  <button class="demo-dialog-close" id="mobile-demo-close" type="button" aria-label="Cerrar selector">×</button>
+                </div>
+                <p class="demo-dialog-copy">Tocá una opción para abrir su demo.</p>
+                <div class="demo-trade-grid" id="mobile-demo-grid" role="group" aria-label="Rubros disponibles"></div>
+              </div>
+            </dialog>
           </div>
 
           <div class="hero-visual" data-scene-frame>
