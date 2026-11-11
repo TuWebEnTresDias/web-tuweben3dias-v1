@@ -905,9 +905,7 @@ h2 {
 .globe-land { fill: #8ceac9; stroke: #c5fff0; stroke-opacity: .26; stroke-width: .7; }
 .globe-latitude, .globe-longitude { opacity: .25; }
 .globe-outline { stroke: #9cfff0; stroke-opacity: .72; filter: drop-shadow(0 0 8px #37dbbe); }
-.planet-clouds { animation: planet-cloud-drift 22s ease-in-out infinite alternate; }
 .globe-connections path { stroke-dasharray: 4 9; animation-duration: 8s; }
-@keyframes planet-cloud-drift { from { transform: translateX(-5px); } to { transform: translateX(8px); } }
 @media (max-width: 760px) {
   .hero { min-height: 100svh; padding: 84px 0 42px; }
   .hero-grid { gap: 0; }
@@ -1127,10 +1125,8 @@ h2 {
 
 /* Planeta del hero: rotación solo visible y nodos con más presencia */
 .globe-rotating-surface {
-  transform-box: view-box;
-  transform-origin: 400px 320px;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: globe-axis-spin 78s linear infinite;
   animation-play-state: paused;
   will-change: transform;
@@ -1138,8 +1134,8 @@ h2 {
 .hero-visual:not(.is-in-view) .business-scene * { animation-play-state: paused; }
 .hero-visual.is-in-view .business-scene * { animation-play-state: running; }
 @keyframes globe-axis-spin {
-  from { transform: perspective(900px) rotateY(0deg); }
-  to { transform: perspective(900px) rotateY(360deg); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .globe-node-card {
   fill: url(#globe-node-surface);
