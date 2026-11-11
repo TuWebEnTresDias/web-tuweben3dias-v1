@@ -1292,9 +1292,9 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
 @media (min-width: 1180px) and (min-height: 720px) {
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+    grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
     align-items: center;
-    gap: clamp(34px, 3vw, 56px);
+    gap: clamp(30px, 2.5vw, 42px);
     text-align: left;
   }
 
@@ -1324,10 +1324,10 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
   }
 
   .hero-visual .business-scene {
-    width: 138%;
+    width: 118%;
     height: 100%;
     max-width: none;
-    margin-left: -19%;
+    margin-left: -9%;
   }
 }
 
