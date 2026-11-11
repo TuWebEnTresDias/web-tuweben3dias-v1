@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=globe-wrap-2">
+    <link rel="stylesheet" href="./styles.css?v=globe-wrap-3">
     <script src="./app.js?v=mobile-demo-grid-order-2" defer></script>
   </head>
   <body>
@@ -154,6 +154,7 @@
                 <g clip-path="url(#globe-clip)" class="globe-sphere">
                 <circle cx="400" cy="320" r="232" fill="url(#globe-surface)"/>
                 <rect x="168" y="88" width="464" height="464" filter="url(#planet-texture)" opacity=".58"/>
+                <rect class="planet-clouds" x="168" y="88" width="464" height="464" filter="url(#cloud-texture)" opacity=".27"/>
                 <g class="globe-rotating-surface">
                   <g class="globe-map-tile">
                     <g id="globe-land-tile" class="globe-land" opacity=".64">
@@ -164,11 +165,10 @@
                   <path d="M521 392l19-14 22 4 18 14 5 18-18 8-19-5-14 4-17-12z"/>
                   <path d="M380 160l8-10 12 3 4 10-10 8zM582 356l7-6 8 10-5 12-7-3z"/>
                 </g>
-                    <rect id="globe-cloud-tile" class="planet-clouds" x="168" y="88" width="464" height="464" filter="url(#cloud-texture)" opacity=".27"/>
+                    
                   </g>
                   <g class="globe-map-tile" transform="translate(464 0)">
                     <use href="#globe-land-tile"/>
-                    <use href="#globe-cloud-tile"/>
                   </g>
                 </g>
                 <path class="globe-latitude" d="M170 270c126 78 334 78 460 0M168 320c128 56 336 56 464 0M170 370c126-78 334-78 460 0"/>
