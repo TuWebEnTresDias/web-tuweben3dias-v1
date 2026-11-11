@@ -1,6 +1,12 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector("#mobile-nav");
 
+const heroTradeSelect = document.querySelector("#trade");
+const mobileDemoTrigger = document.querySelector("#mobile-demo-trigger");
+const mobileDemoDialog = document.querySelector("#mobile-demo-dialog");
+const mobileDemoGrid = document.querySelector("#mobile-demo-grid");
+const mobileDemoClose = document.querySelector("#mobile-demo-close");
+
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
@@ -40,6 +46,68 @@ const demoUrls = {
   zinguero: "https://tuwebentresdias.github.io/demo-zinguero/",
 };
 
+const resolveDemoUrl = (trade) =>
+  demoUrls[trade] || new URL(trade, "https://tuweben3dias.com/").href;
+
+if (
+  heroTradeSelect &&
+  mobileDemoTrigger &&
+  mobileDemoDialog &&
+  mobileDemoGrid &&
+  mobileDemoClose &&
+  typeof mobileDemoDialog.showModal === "function"
+) {
+  const tradeIcons = {
+    plomero: "🔧",
+    electricista: "⚡",
+    pintor: "🎨",
+    gasista: "🔥",
+    techista: "🏠",
+    albanil: "🧱",
+    fumigador: "🛡️",
+    vidriero: "🪟",
+    zinguero: "🪚",
+  };
+
+  [...heroTradeSelect.options]
+    .filter((option) => option.value)
+    .forEach((option) => {
+      const button = document.createElement("button");
+      button.className = "demo-trade-option";
+      button.type = "button";
+      button.dataset.trade = option.value;
+
+      const icon = document.createElement("span");
+      icon.className = "demo-trade-icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.textContent = tradeIcons[option.value] || "✦";
+
+      const name = document.createElement("span");
+      name.className = "demo-trade-name";
+      name.textContent = option.textContent.trim();
+
+      const arrow = document.createElement("span");
+      arrow.className = "demo-trade-arrow";
+      arrow.setAttribute("aria-hidden", "true");
+      arrow.textContent = "↗";
+
+      button.append(icon, name, arrow);
+      button.addEventListener("click", () => {
+        window.open(resolveDemoUrl(option.value), "_blank", "noopener,noreferrer");
+        mobileDemoDialog.close();
+      });
+      mobileDemoGrid.append(button);
+    });
+
+  mobileDemoTrigger.addEventListener("click", () => mobileDemoDialog.showModal());
+  mobileDemoClose.addEventListener("click", () => mobileDemoDialog.close());
+  mobileDemoDialog.addEventListener("click", (event) => {
+    if (event.target === mobileDemoDialog) mobileDemoDialog.close();
+  });
+
+  document.documentElement.classList.add("has-js");
+}
+
 document.querySelectorAll("#demo-form, #closing-demo-form").forEach((demoForm) => {
   const tradeSelect = demoForm.querySelector("select");
   const demoStatus = demoForm.querySelector(".demo-status");
@@ -57,7 +125,7 @@ document.querySelectorAll("#demo-form, #closing-demo-form").forEach((demoForm) =
     }
 
     tradeSelect.removeAttribute("aria-invalid");
-    const demoUrl = demoUrls[trade] || new URL(trade, "https://tuweben3dias.com/").href;
+    const demoUrl = resolveDemoUrl(trade);
     window.open(demoUrl, "_blank", "noopener,noreferrer");
     if (demoStatus) demoStatus.textContent = "Abrimos la demo en otra pestaña. No enviamos datos personales.";
   });
