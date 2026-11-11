@@ -141,8 +141,6 @@ document.querySelectorAll("#demo-form, #closing-demo-form").forEach((demoForm) =
   });
 });
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const sceneFrame = document.querySelector("[data-scene-frame]");
-
 const heroVisual = document.querySelector(".hero-visual");
 const heroSection = heroVisual?.closest(".hero");
 if (heroVisual && !prefersReducedMotion.matches && "IntersectionObserver" in window) {
