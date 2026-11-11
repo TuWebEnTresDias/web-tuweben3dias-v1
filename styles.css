@@ -1330,3 +1330,11 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
     margin-left: -19%;
   }
 }
+
+
+@media (min-width: 1180px) and (min-height: 720px) {
+  .hero-grid {
+    width: min(var(--container), calc(100% - 52px));
+    margin-inline: auto;
+  }
+}
