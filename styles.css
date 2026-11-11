@@ -1356,3 +1356,92 @@ h2 { font-size: clamp(2.65rem, 5.4vw, 4.65rem); line-height: 1.08; }
     word-spacing: .015em;
   }
 }
+
+/* Selector de demos en mobile: una entrada simple y un grid para elegir */ 
+.mobile-demo-trigger { display: none; }
+.demo-dialog {
+  width: min(490px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  max-height: min(84svh, 720px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 23px;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(245,166,35,.12), transparent 52%),
+    linear-gradient(155deg, #15191a, #0c0e10 76%);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .58);
+}
+.demo-dialog::backdrop { background: rgba(3, 5, 6, .76); backdrop-filter: blur(8px); }
+.demo-dialog[open] { animation: demo-dialog-enter .2s ease-out both; }
+@keyframes demo-dialog-enter {
+  from { opacity: 0; transform: translateY(10px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.demo-dialog-panel { padding: 25px; }
+.demo-dialog-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.demo-dialog-kicker { margin: 0 0 7px; color: var(--amber); font-size: .62rem; font-weight: 750; letter-spacing: .14em; }
+.demo-dialog-heading h2 { margin: 0; font-size: clamp(1.55rem, 5vw, 2rem); line-height: 1.12; letter-spacing: -.05em; }
+.demo-dialog-copy { margin: 12px 0 20px; color: #a0a6a8; font-size: .85rem; }
+.demo-dialog-close {
+  flex: 0 0 auto;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 12px;
+  color: #f4f4f2;
+  background: rgba(255,255,255,.045);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+.demo-dialog-close:hover { border-color: rgba(245,166,35,.42); background: rgba(245,166,35,.1); }
+.demo-trade-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.demo-trade-option {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 14px;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  min-height: 68px;
+  padding: 10px 11px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 15px;
+  color: #f3f4f1;
+  background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(18,21,22,.94));
+  text-align: left;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.demo-trade-option:hover { transform: translateY(-2px); border-color: rgba(245,166,35,.42); background: linear-gradient(145deg, rgba(245,166,35,.1), rgba(18,21,22,.96)); }
+.demo-trade-option:focus-visible, .demo-dialog-close:focus-visible { outline: 2px solid var(--amber-light); outline-offset: 3px; }
+.demo-trade-icon { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(245,166,35,.2); border-radius: 11px; background: rgba(245,166,35,.075); font-size: 1rem; }
+.demo-trade-name { overflow-wrap: anywhere; font-size: .8rem; font-weight: 650; line-height: 1.25; }
+.demo-trade-arrow { color: var(--amber); font-size: .9rem; font-weight: 700; text-align: right; }
+@media (max-width: 760px) {
+  html.has-js #demo-form > label,
+  html.has-js #demo-form .demo-controls,
+  html.has-js #demo-form .demo-status { display: none; }
+  html.has-js #demo-form .mobile-demo-trigger {
+    display: flex;
+    width: calc(100% - 32px);
+    min-height: 56px;
+    margin-inline: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .demo-dialog-panel { padding: 22px; }
+}
+@media (max-width: 380px) {
+  .demo-dialog-panel { padding: 18px; }
+  .demo-trade-grid { gap: 8px; }
+  .demo-trade-option { grid-template-columns: 30px minmax(0, 1fr) 12px; gap: 7px; padding-inline: 9px; }
+  .demo-trade-icon { width: 30px; height: 30px; }
+  .demo-trade-name { font-size: .76rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .demo-dialog[open] { animation: none; }
+  .demo-trade-option { transition: none; }
+}
